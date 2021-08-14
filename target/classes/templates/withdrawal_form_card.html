@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Usuario</title>
+    <!-- Bootstrap core CSS -->
+    <link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+
+  <body style="height:100vh;">
+
+    <div class="container h-100">
+      <div class="d-flex flex-column justify-content-between h-100 p-4">
+        <div class="">
+          <div th:replace="fragments.html::logo"></div>
+          <form class="w-50 mx-auto my-3" method="post" action="#"
+                th:action="@{/withdrawal/save}"
+                th:object="${withdrawalForm}">
+            <h3 class="text-center">Retirar artículo de taquilla</h3>
+            <input type="number" class="form-control" id="id" th:field="*{id}" hidden>
+            <input type="text" class="form-control" id="at"	th:field="*{at}" hidden>
+            <input type="text" class="form-control" id="at"	th:field="*{userNumber}" hidden>
+            <div class="form-group my-5">
+              <label class="form-label" for="item">Artículo</label> <select
+                class="form-select form-select-lg" id="item" th:field="*{itemId}">
+                <option th:each="element : ${itemsList}" th:value="${element.id}"
+                        th:text="${element.denominacion}"></option>
+              </select>
+            </div>
+            <div class="form-group my-5">
+              <label class="form-label" for="number">Cantidad</label>
+              <input type="number" class="form-control form-control-lg" id="number" th:field="*{quantity}">
+            </div>
+            <div class="d-flex justify-content-end">
+              <a th:href="@{/}" class="btn btn-danger btn-lg mx-2">Cancelar</a>
+              <button type="submit" class="btn btn-primary btn-lg mx-2">Enviar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+
+    </div>
+    <br>
+    <br>
+
+    <div th:replace="fragments.html :: footer"></div>
+    <!--   Bootstrap js -->
+    <script src="/webjars/jquery/jquery.min.js"></script>
+    <script src="/webjars/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/public_scripts/bootstrap-input-spinner.js"></script>
+    <script>
+      $("input[type='number']").inputSpinner();
+    </script>
+
+  </body>
+
+</html>

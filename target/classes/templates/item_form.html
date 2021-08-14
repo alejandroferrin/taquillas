@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Item</title>
+    <!-- Bootstrap core CSS -->
+    <link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <header th:insert="fragments.html :: header"> </header>
+    <div class="container">
+      <form class="w-50 mx-auto my-3" method="post" action="#"
+            th:action="${itemForm.id!=0} ? @{/item/edit/submit} : @{/item/save}"
+            th:object="${itemForm}">
+        <h3 th:text="${itemForm.id!=0} ? 'Editar Item' : 'Nuevo Item' "
+            class="text-center"></h3>
+        <input type="number" class="form-control" id="id" th:field="*{id}"
+               hidden=true>
+        <div class="form-group my-3">
+          <label class="form-label" for="codigo">Código</label> <input
+            type="text" class="form-control" id="codigo" th:field="*{codigo}">
+        </div>
+        <div class="form-group my-3">
+          <label class="form-label" for="denom">Denominación</label> <input
+            type="text" class="form-control" id="denom"
+            th:field="*{denominacion}">
+        </div>
+        <div class="form-group my-3">
+          <label class="form-label" for="existencias">Existencias</label> <input
+            type="text" class="form-control" id="number"
+            th:field="*{existencias}">
+        </div>
+        <div class="form-group my-3">
+          <label class="form-label" for="locker">Taquilla</label> <select
+            class="form-select" id="locker" th:field="*{taquillaNumber}">
+            <option th:each="locker : ${lockersList}"
+                    th:value="${locker.number}" th:text="${locker.number}"></option>
+          </select>
+        </div>
+        <div class="d-flex justify-content-end">
+          <a th:href="@{/item/list}" class="btn btn-danger mx-2">Cancelar</a>
+          <button type="submit" class="btn btn-primary mx-2">Enviar</button>
+        </div>
+
+      </form>
+
+
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div th:replace="fragments.html :: footer"></div>
+    <!--   Bootstrap js -->
+    <script src="/webjars/jquery/jquery.min.js"></script>
+    <script src="/webjars/bootstrap/js/bootstrap.bundle.min.js"></script>
+  </body>
+
+</html>

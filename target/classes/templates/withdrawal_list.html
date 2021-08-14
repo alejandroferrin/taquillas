@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista retiradas</title>
+    <!-- Bootstrap core CSS -->
+    <link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <header th:insert="fragments.html :: header"> </header>
+    <div class="container">
+      <h3 class="my-4 text-center">Retiradas</h3>
+      <!-- <input class="form-control mt-3 w-25" type="text" id="myInput"
+             onkeyup="search()" placeholder="Buscar...">-->
+      <table id="myTable"
+             class="table table-light table-striped my-4 text-center">
+        <thead>
+          <tr>
+            <th>Time_stamp</th>
+            <th>Usuario</th>
+            <th>Cantidad</th>
+            <th>Item</th>
+            <th>Taquilla</th>
+            <th>Editar</th>
+            <th>Eliminar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr th:each="element : ${withdrawalList}">
+            <td th:text="${element.at}"></td>
+            <td th:text="${element.user.name}"></td>
+            <td th:text="${element.quantity}"></td>
+            <td th:text="${element.item.denominacion}"></td>
+            <td th:text="${element.item.locker.number}"></td>
+            <td><a class="btn btn-warning"
+                   th:href="@{/withdrawal/edit/{id}(id=${element.id})}"> <svg th:replace="fragments.html :: edit_icon"></svg></a></td>
+            <td><a class="btn btn-danger"
+                   th:href="@{/withdrawal/delete/{id}(id=${element.id})}"
+                   th:data-confirm-delete="|¿Seguro que quieres eliminar la retirada?|"
+                   th:onclick="if (!confirm(this.getAttribute('data-confirm-delete'))) return false"><svg th:replace="fragments.html :: delete_icon"></svg></a></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="d-flex justify-content-center mt-3">
+        <a class="btn btn-primary mx-2" th:href="@{/withdrawal/new}">
+          <svg th:replace="fragments.html :: new_icon"></svg>
+          Nueva Retirada</a>
+        <button class="btn btn-warning mx-2" id="csv">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
+          <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+          <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
+          </svg>
+          Descargar CSV</button>
+      </div>
+
+
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+    <div th:replace="fragments.html :: footer"></div>
+    <!--   Bootstrap js -->
+    <script src="/webjars/jquery/jquery.min.js"></script>
+    <script src="/webjars/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/private_scripts/table.js"></script>
+    <script>
+      let myDataTable = new RdataTB('myTable');
+
+      $(document).ready(function () {
+        $("#csv").click(function () {
+          myDataTable.DownloadCSV('retiradas');
+        });
+      });
+    </script>
+  </body>
+
+</html>
