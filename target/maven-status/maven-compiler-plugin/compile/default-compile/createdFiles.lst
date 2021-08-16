@@ -36,6 +36,7 @@ taquillas/gpio/GPIO_Service_Impl_Mocked.class
 taquillas/model/dto/LockerDtoAddRole$LockerDtoAddRoleBuilder.class
 taquillas/repository/LockerRepository.class
 taquillas/repository/RoleRepository.class
+taquillas/config/MvcConfig.class
 taquillas/gpio/GPIO_Service.class
 taquillas/controller/UserController.class
 taquillas/model/dto/converter/UserDtoConverter.class

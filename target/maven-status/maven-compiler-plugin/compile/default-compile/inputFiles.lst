@@ -5,6 +5,7 @@
 /home/pi/mvc_taquillas/src/main/java/taquillas/model/RoleName.java
 /home/pi/mvc_taquillas/src/main/java/taquillas/model/dto/UserDto.java
 /home/pi/mvc_taquillas/src/main/java/taquillas/model/dto/LockerDto.java
+/home/pi/mvc_taquillas/src/main/java/taquillas/config/MvcConfig.java
 /home/pi/mvc_taquillas/src/main/java/taquillas/controller/CardController.java
 /home/pi/mvc_taquillas/src/main/java/taquillas/model/dto/converter/LockerDtoConverter.java
 /home/pi/mvc_taquillas/src/main/java/taquillas/gpio/GPIO_Service.java

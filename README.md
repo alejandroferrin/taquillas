@@ -59,7 +59,70 @@ El sistema permite cablear hasta 20 taquilas, de la salida 0 a la 19.
 
 ### Raspberry Pi
 
-__TODO__
+Instala en una tarjeta mirco SD __Raspberry Pi OS__ usando [Raspberry Pi Imager](https://www.raspberrypi.org/software/) 
+
+Asigna una IP fija a la Raspberry [tutorial](https://raspberryparanovatos.com/tutoriales/asignar-ip-fija-raspberry-pi/) 
+
+Comando instalación:
+
+`curl -s https://raw.githubusercontent.com/alejandroferrin/taquillas/main/setup_taquillas.sh | sudo bash`
+
+__Tareas que realiza el script__
+
+- Crear carpeta AppTaquillas
+- Actualizar sistema
+- Instalar JDK 1.8
+- Instalar librerías funcionamiento smart card reader
+- Instalar drivers ACS
+- Crear servicios que levanten al arranque la app y el lector de tarjetas
+- Instalar pi4j
+- Instalar docker
+- Dar permisos al usuario en grupo docker
+- Instalar docker-compose
+- Crear el archivo docker-compose.yml
+
+Tras la ejecución del script debes apagar y volver a encender la Raspberry y después ejecutar los siguientes comandos __dentro de la carpeta AppTaquillas:__
+
+`sudo pi4j --wiringpi`
+
+`docker-compose up -d`
+
+`curl -s https://raw.githubusercontent.com/alejandroferrin/taquillas/main/setup_taquillas_final.sh | sudo bash`
+
+
+Esto levantará los contenedores docker con la base de datos y el administrador de bases de datos al cual podrás acceder a través del navegador en el puerto _8080_
+
+También se crea el servicio que inicia la aplicación al reiniciar.
+
+
+Debes volver a reiniciar el equipo para que la aplicación detecte la base de datos al ejecutarse.
+
+Para cambiar los argumentos de la ejecución del servicio puedes modificar  el archivo __/home/pi/.bashrc__
+
+En concreto la linea:
+
+`java -jar /home/pi/AppTaquillas/mvc_taquillas-0.0.1-SNAPSHOT.jar`
+
+Por ejemplo para la ejecución con cambio de contraseña deberías añadir:
+
+`--admin_password=tu_pass`
+
+### Windows
+
+Actualmente no existe un script que automatice la instalación en windows no obstante los pasos a seguir son los siguientes:
+
+
+- Instalar JDK 1.8
+- (En Windows 10 no es necesario instalar drivers para el lector de tarjetas)
+- Instalar mariadb y [crear una base de datos](https://www.daniloaz.com/es/como-crear-un-usuario-en-mysql-mariadb-y-concederle-permisos-para-una-base-de-datos-desde-la-linea-de-comandos/)  llamada mvc_taquillas con un usuario llamado _taquillas_ y password _7aqui11as_
+- Descargar [ejecutable](https://github.com/alejandroferrin/taquillas/raw/main/target/mvc_taquillas-0.0.1-SNAPSHOT.jar) 
+- Crear servicio que levante al arranque la app:
+
+Deberá ejecutar algo como:
+`java -jar ruta_al_ejecutable --os=other --admin_password=mi_password`
+
+- Cargar el archivo [main.py](pico/main.py) en la __Raspberry Pi Pico__ con el IDE [Thonny](https://thonny.org/) (Se debe configurar la __Pico__ para [usar micropython](https://www.raspberrypi.org/documentation/rp2040/getting-started/#getting-started-with-micropython) )
+
 
 ----
 ## Uso

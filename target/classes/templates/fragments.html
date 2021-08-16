@@ -10,7 +10,7 @@
     <div th:fragment="header">
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-          <img src="/images/icono_taquillas.svg" alt="alt" height="30"/>
+          <a th:href="@{/}"><img src="/images/icono_taquillas.svg" alt="alt" height="30"/></a>
           <a class="navbar-brand mx-2" th:href="@{/}">AppTaquillas</a>
           <button class="navbar-toggler" type="button"
                   data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -26,16 +26,23 @@
               </li>
               <li class="nav-item"><a class="nav-link" th:href="@{/item/list}">Items</a></li>
               <li class="nav-item"><a class="nav-link" th:href="@{/withdrawal/list}">Retiradas</a></li>
-              <li class="nav-item"><a class="nav-link" th:href="@{/card}">Leer nº tarjeta</a></li>
-              <li class="nav-item"><a class="nav-link" th:href="@{/logout}">Logout</a></li>
+              <li class="nav-item"><a class="nav-link" th:href="@{/card}">Card</a></li>
+              <li class="nav-item">
+                <form th:action="@{/logout}" method="post">
+                  <input type="submit" value="Logout" hidden="true"/>
+                  <button class="btn btn-light" type="submit">Logout</button>
+                </form>
+              </li>
             </ul>
           </div>
         </div>
       </nav>
     </div>
 
-    <div th:fragment="logo" class="d-flex align-items-center justify-content-center w-100">
+    <div th:fragment="logo" class="d-flex flex-row align-items-center justify-content-center w-100">
+        <a class="link-dark" th:href="@{/}">
       <img src="/images/icono_taquillas.svg" alt="alt" height="70" class="mx-3 shadow"/>
+        </a>
       <h1 class="display-1"><strong>App Taquillas</strong></h1>
     </div>
 
