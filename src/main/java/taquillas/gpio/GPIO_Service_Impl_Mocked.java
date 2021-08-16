@@ -13,8 +13,8 @@ import org.springframework.stereotype.Service;
  *
  * @author alex
  */
-@Component
-@Qualifier("mock")
+//@Component
+//@Qualifier("mock")
 public class GPIO_Service_Impl_Mocked implements GPIO_Service {
 
 

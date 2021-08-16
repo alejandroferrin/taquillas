@@ -16,6 +16,7 @@ import jssc.SerialPortException;
 import jssc.SerialPortList;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
@@ -24,19 +25,21 @@ import org.springframework.stereotype.Service;
  * @author alex
  */
 @Component
-@Qualifier("pico")
+//@Qualifier("pico")
+@ConditionalOnProperty(
+  value = "gpio",
+  havingValue = "pico",
+  matchIfMissing = true)
 public class GPIO_Service_Impl_Pico implements GPIO_Service {
 
-  SerialPort port;
-  
-  @Value("${linuxPort:/dev/ttyACM0}")
+  @Value("${linuxPort}")
   private String linuxPort;
-  @Value("${winPort:COM3}")
+  @Value("${winPort}")
   private String winPort;
 
-  public GPIO_Service_Impl_Pico() {
+  private SerialPort init() {
+    SerialPort port = null;
     String os = System.getProperty("os.name");
-
     if (isWindows(os)) {
       port = new SerialPort(winPort);
 
@@ -44,19 +47,13 @@ public class GPIO_Service_Impl_Pico implements GPIO_Service {
       port = new SerialPort(linuxPort);
 
     }
-
-    /*
-    String[] ports = SerialPortList.getPortNames();
-    if (ports.length > 0) {
-      System.out.println(ports[0]);
-      port = new SerialPort(ports[0]);
-    }
-     */
+    return port;
   }
 
   @Override
   public void open(int taquillaNumber) {
     try {
+      SerialPort port = init();
       System.out.println("Pico_ Taquilla Abierta nº: " + taquillaNumber);
       port.openPort();
       port.setParams(BAUDRATE_115200, DATABITS_8, STOPBITS_1, PARITY_NONE);
@@ -70,6 +67,7 @@ public class GPIO_Service_Impl_Pico implements GPIO_Service {
   @Override
   public void close(int taquillaNumber) {
     try {
+      SerialPort port = init();
       System.out.println("Pico_ Taquilla Cerrada nº: " + taquillaNumber);
       port.openPort();
       port.setParams(BAUDRATE_115200, DATABITS_8, STOPBITS_1, PARITY_NONE);

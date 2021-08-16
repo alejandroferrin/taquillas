@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puertos serie</title>
+    <!-- Bootstrap core CSS -->
+    <link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <header th:insert="fragments.html :: header"> </header>
+    <div class="container">
+      <h3 class="my-4 text-center">Puertos serie</h3>
+      <p class="my-4 text-center">Por defecto la aplicación envía la información a la Raspberry Pi Pico por los puertos serie 'COM3' para Windows y '/dev/ttyACM0' para linux, si estos puertos no funcionaran para tu equipo aquí tienes un listado de los puertos serie que puedes usar para probar. Usa el argumento '--linuxPort=xxx' o '--winPort=xxx' a la hora de ejecutar el .jar</p>
+      <table id=""
+             class="table table-light table-striped my-4 text-center w-50 mx-auto">
+        <thead>
+          <tr>
+            <th>Puertos</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr th:each="element : ${serial_ports}">
+            <td th:text="${element}"></td>
+          </tr>
+        </tbody>
+      </table>
+
+
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+    <div th:replace="fragments.html :: footer"></div>
+    <!--   Bootstrap js -->
+    <script src="/webjars/jquery/jquery.min.js"></script>
+    <script src="/webjars/bootstrap/js/bootstrap.bundle.min.js"></script>
+  </body>
+
+</html>

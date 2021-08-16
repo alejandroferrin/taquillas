@@ -45,18 +45,8 @@ public class WithdrawalController {
   @Autowired
   private CheckRoleService checkService;
 
-  @Value("${os:raspberry}")
-  private String os;
-  @Value("${os.raspberry}")
-  private String raspberry;
-  @Value("${os.other}")
-  private String other;
   @Autowired
-  @Qualifier("pi")
-  private GPIO_Service gpio_raspberry;
-  @Autowired
-  @Qualifier("pico")
-  private GPIO_Service gpio_pico;
+  private GPIO_Service gpio;
 
   @GetMapping("/card")
   public String redirect(Model model) {
@@ -91,13 +81,7 @@ public class WithdrawalController {
         Item item = itemRepo.findById(newElement.getItemId()).orElse(null);
         if (item != null) {
 
-          if (os.equals(raspberry)) {
-            System.out.println("Abriendo con pi");
-            gpio_raspberry.open(item.getLocker().getNumber());
-          } else if (os.equals(other)) {
-            System.out.println("Abriendo con pico");
-            gpio_pico.open(item.getLocker().getNumber());
-          }
+            gpio.open(item.getLocker().getNumber());
 
           model.addAttribute("lockerNumber", item.getLocker().getNumber());
         }
@@ -114,13 +98,7 @@ public class WithdrawalController {
     Item item = itemRepo.findById(id).orElse(null);
     if (item != null) {
 
-      if (os.equals(raspberry)) {
-        System.out.println("Cerrando con pi");
-        gpio_raspberry.close(item.getLocker().getNumber());
-      } else if (os.equals(other)) {
-        System.out.println("Cerrando con pico");
-        gpio_pico.close(item.getLocker().getNumber());
-      }
+        gpio.close(item.getLocker().getNumber());
 
     }
     return "redirect:/";
