@@ -10,11 +10,7 @@ La aplicación está pensada para activar los GPIO de una __Raspberry Pi 4__ o u
 
 Si no se puede correr sobre una __Raspberry Pi 4__ porque la política de la empresa en la que se instala el taquillero obliga a usar un Sistema Operativo Windows se puede ejecutar el __JAR__ en una máquina con Windows y con una __Raspberry Pi Pico__ conectada mediante usb al servidor accionar los relés.
 
-Para indicar esta última opción debemos usar el argumento `--os=other`
 
-- Ejemplo:
-
-`java -jar mvc_taquillas-0.0.1-SNAPSHOT.jar --os=other`
 
 __Material__
 
@@ -74,7 +70,6 @@ __Tareas que realiza el script__
 - Instalar JDK 1.8
 - Instalar librerías funcionamiento smart card reader
 - Instalar drivers ACS
-- Crear servicios que levanten al arranque la app y el lector de tarjetas
 - Instalar pi4j
 - Instalar docker
 - Dar permisos al usuario en grupo docker
@@ -97,11 +92,11 @@ También se crea el servicio que inicia la aplicación al reiniciar.
 
 Debes volver a reiniciar el equipo para que la aplicación detecte la base de datos al ejecutarse.
 
-Para cambiar los argumentos de la ejecución del servicio puedes modificar  el archivo __/home/pi/.bashrc__
+Para cambiar los argumentos de la ejecución del servicio puedes modificar  el archivo __/etc/rc.local__
 
 En concreto la linea:
 
-`java -jar /home/pi/AppTaquillas/mvc_taquillas-0.0.1-SNAPSHOT.jar`
+`java -jar /home/pi/AppTaquillas/mvc_taquillas-0.0.1-SNAPSHOT.jar --gpio=pi4`
 
 Por ejemplo para la ejecución con cambio de contraseña deberías añadir:
 
@@ -119,7 +114,7 @@ Actualmente no existe un script que automatice la instalación en windows no obs
 - Crear servicio que levante al arranque la app:
 
 Deberá ejecutar algo como:
-`java -jar ruta_al_ejecutable --os=other --admin_password=mi_password`
+`java -jar <ruta_al_ejecutable> --admin_password=mi_password`
 
 - Cargar el archivo [main.py](pico/main.py) en la __Raspberry Pi Pico__ con el IDE [Thonny](https://thonny.org/) (Se debe configurar la __Pico__ para [usar micropython](https://www.raspberrypi.org/documentation/rp2040/getting-started/#getting-started-with-micropython) )
 
@@ -159,7 +154,10 @@ El password puede cambiarse si al ejecutar el programa lo hacemos con el argumen
 -
 ![retiradas](images/retiradas.png)
 
-----
-## Licencia
-Esta aplicación es de código abierto.
-Consulta [LICENSE](LICENSE.md) para conocer las condiciones de la licencia ( GNU GPLv3 )
+### Argumentos
+
+- `--linuxport=xxx`
+- `--winPort=yyy`
+- `--admin_password=my_password`
+- `--gpio=pico` o `--gpio=pi4`
+
