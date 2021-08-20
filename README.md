@@ -5,6 +5,8 @@ Esta aplicación ha sido creada para su uso en una fabrica en la que se quería 
 
 La aplicación permite crear usuarios asociados a un número de tarjeta nfc que tendrán acceso solo a las taquillas autorizadas.
 
+[Demo](https://alejandroferrin.github.io/taquillas/) 
+
 ## Material necesario
 La aplicación está pensada para activar los GPIO de una __Raspberry Pi 4__ o una __Raspberry Pi Pico__
 
@@ -121,6 +123,8 @@ Deberá ejecutar algo como:
 
 ----
 ## Uso
+
+[Demo](https://alejandroferrin.github.io/taquillas/) 
 
 La aplicación se ejecuta en el __puerto 9000__ por lo que para acceder se debe escribir en la barra de direcciones de un navegador `http://ip_maquina_servidor:9000`
 
