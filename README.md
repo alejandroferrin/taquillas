@@ -128,12 +128,7 @@ La pantalla principal se ha creado con la intención de que se visualice en una 
 
 En esta pantalla el usuario debe presionar el botón con el icono de la tarjeta y a continuación se le pedirá que acerque la tarjeta para ser leída. Una vez identificado el usuario podrá seleccionar el artículo deseado y la cantidad a retirar. Si el usuario cuenta con los permisos para la taquilla que contiene los artículos esta se abrirá y podrán ser retirados.
 
-![main](images/main_screen.png)
--
-![withdrawal](images/withdrawal_screen.png)
--
-![sucess](images/success_screen.png)
--
+
 
 #### Zona del administrador del taquillero
 Presionando el botón de Admin accedemos a la zona de administración, en la que se pueden crear usuarios, items, taquillas y consultar las retiradas de material.
@@ -146,13 +141,6 @@ El password puede cambiarse si al ejecutar el programa lo hacemos con el argumen
 
 `java -jar mvc_taquillas-0.0.1-SNAPSHOT.jar --admin_password=1234`
 
-![usuarios](images/usuarios.png)
--
-![taquillas](images/taquillas.png)
--
-![items](images/items.png)
--
-![retiradas](images/retiradas.png)
 
 ### Argumentos
 
