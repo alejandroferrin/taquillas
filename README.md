@@ -1,7 +1,7 @@
 # App Taquillas
 La aplicación taquillas sirve para gestionar un taquillero que guarde material con acceso restringido.
 
-Esta aplicación ha sido creada para su uso en una fabrica en la que se quería permitir el acceso a ciertos EPI's solo a parte de la plantilla.
+Esta aplicación ha sido creada para su uso en una fábrica en la que se quería permitir el acceso a ciertos EPI's solo a parte de la plantilla.
 
 La aplicación permite crear usuarios asociados a un número de tarjeta nfc que tendrán acceso solo a las taquillas autorizadas.
 
