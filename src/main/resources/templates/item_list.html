@@ -1,76 +1,75 @@
 <!DOCTYPE html>
 <html lang="es">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Lista items</title>
-        <!-- Bootstrap core CSS -->
-        <link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-        <link href="/css/jquery.ml-keyboard.css" rel="stylesheet">
-        <link href="/css/taquillas.css" rel="stylesheet">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista items</title>
+    <!-- Bootstrap core CSS -->
+    <link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/jquery.ml-keyboard.css" rel="stylesheet">
+    <link href="/css/taquillas.css" rel="stylesheet">
+</head>
 
-    <body>
+<body>
 
-        <header th:insert="fragments.html :: header"> </header>
-        <div class="container">
-            <h3 class="my-4 text-center">Items</h3>
-            <table id="myTable"
-                   class="table table-light table-striped my-4 text-center">
-                <thead>
-                    <tr>
-                        <th>Código</th>
-                        <th>Denominación</th>
-                        <th>Existencias</th>
-                        <th>Taquilla</th>
-                        <th>Retiradas</th>
-                        <th>Editar</th>
-                        <th>Eliminar</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr th:each="element : ${itemsList}">
-                        <td th:text="${element.codigo}"></td>
-                        <td th:text="${element.denominacion}"></td>
-                        <td th:text="${element.existencias}"></td>
-                        <td th:text="${element.locker.number}"></td>
-                        <td><a class="btn btn-success"
-                               th:href="@{/withdrawal/list/byItem/{id}(id=${element.id})}"><svg th:replace="fragments.html :: arrow_icon"></a></td>
-                        <td><a class="btn btn-warning"
-                               th:href="@{/item/edit/{id}(id=${element.id})}"><svg th:replace="fragments.html :: edit_icon"></svg></a></td>
-                        <td><a class="btn btn-danger"
-                               th:href="@{/item/delete/{id}(id=${element.id})}"
-                               th:data-confirm-delete="|¿Seguro que quieres eliminar el item ${element.denominacion}?|"
-                               th:onclick="if (!confirm(this.getAttribute('data-confirm-delete'))) return false"><svg th:replace="fragments.html :: delete_icon"></svg></a></td>
-                    </tr>
-                </tbody>
-            </table>
-            <div class="d-flex justify-content-center mt-3">
-                <a class="btn btn-primary mx-2" th:href="@{/item/new}">
-                    <svg th:replace="fragments.html :: new_icon"></svg>
-                    Nuevo Item</a>
-            </div>
-
-
+    <header th:insert="fragments.html :: header"> </header>
+    <div class="container">
+        <h3 class="my-4 text-center">Items</h3>
+        <table id="myTable" class="table table-light table-striped my-4 text-center">
+            <thead>
+                <tr>
+                    <th>Código</th>
+                    <th>Denominación</th>
+                    <th>Existencias</th>
+                    <th>Taquilla</th>
+                    <th>Retiradas</th>
+                    <th>Editar</th>
+                    <th>Eliminar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="element : ${itemsList}">
+                    <td th:text="${element.codigo}"></td>
+                    <td th:text="${element.denominacion}"></td>
+                    <td th:text="${element.existencias}"></td>
+                    <td th:text="${element.locker.number}"></td>
+                    <td><a class="btn btn-success" th:href="@{/withdrawal/list/byItem/{id}(id=${element.id})}"><svg
+                                th:replace="fragments.html :: arrow_icon"></svg></a></td>
+                    <td><a class="btn btn-warning" th:href="@{/item/edit/{id}(id=${element.id})}"><svg
+                                th:replace="fragments.html :: edit_icon"></svg></a></td>
+                    <td><a class="btn btn-danger" th:href="@{/item/delete/{id}(id=${element.id})}"
+                            th:data-confirm-delete="|¿Seguro que quieres eliminar el item ${element.denominacion}?|"
+                            th:onclick="if (!confirm(this.getAttribute('data-confirm-delete'))) return false"><svg
+                                th:replace="fragments.html :: delete_icon"></svg></a></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="d-flex justify-content-center mt-3">
+            <a class="btn btn-primary mx-2" th:href="@{/item/new}">
+                <svg th:replace="fragments.html :: new_icon"></svg>
+                Nuevo Item</a>
         </div>
-        <br>
-        <br>
-        <br>
-        <br>
 
 
-        <div th:replace="fragments.html :: footer"></div>
-        <!--   Bootstrap js -->
-        <script src="/webjars/jquery/jquery.min.js"></script>
-        <script src="/webjars/bootstrap/js/bootstrap.bundle.min.js"></script>
-        <script src="/public_scripts/jquery.ml-keyboard.min.js"></script>
-        <script src="/public_scripts/keyboard_button.js"></script>
-        <script src="/private_scripts/table.js"></script>
-        <script>
-            let myDataTable = new RdataTB('myTable');
-        </script>
-    </body>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+    <div th:replace="fragments.html :: footer"></div>
+    <!--   Bootstrap js -->
+    <script src="/webjars/jquery/jquery.min.js"></script>
+    <script src="/webjars/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/public_scripts/jquery.ml-keyboard.min.js"></script>
+    <script src="/public_scripts/keyboard_button.js"></script>
+    <script src="/private_scripts/table.js"></script>
+    <script>
+        let myDataTable = new RdataTB('myTable');
+    </script>
+</body>
 
 </html>

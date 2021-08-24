@@ -1,55 +1,54 @@
-
 <!DOCTYPE html>
 <html lang="es">
 
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lector tarjetas</title>
-    <!-- Bootstrap core CSS -->
-    <link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/css/jquery.ml-keyboard.css" rel="stylesheet">
-    <link href="/css/taquillas.css" rel="stylesheet">
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lector tarjetas</title>
+  <!-- Bootstrap core CSS -->
+  <link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/css/jquery.ml-keyboard.css" rel="stylesheet">
+  <link href="/css/taquillas.css" rel="stylesheet">
+</head>
 
-  <body style="height:100vh;">
-    <header th:insert="fragments.html :: header"> </header>
-    <div class="container h-100">
-      <div class="d-flex flex-column justify-content-between h-100 p-4">
-        <div class="">
-          <div th:replace="fragments.html::logo"></div>
-          <h2 class="text-center mt-5">Presione el botón y luego acerque la tarjeta al lector.</h2>
-          <div class="w-100 text-center">
-            <a th:href="@{/card/card}" class="btn btn-warning btn-lg p-4 mt-5 shadow" id="boton">
-              <svg th:replace="fragments.html :: card"></svg>
-            </a>
-            <br>
+<body style="height:100vh;">
+  <header th:insert="fragments.html :: header"> </header>
+  <div class="container h-100">
+    <div class="d-flex flex-column justify-content-between h-100 p-4">
+      <div class="">
+        <div th:replace="fragments.html::logo"></div>
+        <h2 class="text-center mt-5">Presione el botón y luego acerque la tarjeta al lector.</h2>
+        <div class="w-100 text-center">
+          <a th:href="@{/card/card}" class="btn btn-warning btn-lg p-4 mt-5 shadow" id="boton">
+            <svg th:replace="fragments.html :: card"></svg>
+          </a>
+          <br>
 
-            <div class="alert alert-warning my-5 large w-50 mx-auto" role="alert">
-              <strong>Esperando lectura de tarjeta.</strong>
-            </div>
+          <div class="alert alert-warning my-5 large w-50 mx-auto" role="alert">
+            <strong>Esperando lectura de tarjeta.</strong>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <!--<div th:replace="fragments.html :: footer"></div>-->
+  <!--<div th:replace="fragments.html :: footer"></div>-->
 
 
-    <!--   Bootstrap js -->
-    <script src="/webjars/jquery/jquery.min.js"></script>
-    <script src="/webjars/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="/public_scripts/jquery.ml-keyboard.min.js"></script>
-    <script src="/public_scripts/keyboard_button.js"></script>
-    <script>
-      $(document).ready(function () {
-        $(".alert").hide();
-        $("#boton").click(function () {
-          $(".alert").show();
-        });
+  <!--   Bootstrap js -->
+  <script src="/webjars/jquery/jquery.min.js"></script>
+  <script src="/webjars/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/public_scripts/jquery.ml-keyboard.min.js"></script>
+  <script src="/public_scripts/keyboard_button.js"></script>
+  <script>
+    $(document).ready(function () {
+      $(".alert").hide();
+      $("#boton").click(function () {
+        $(".alert").show();
       });
-    </script>
-  </body>
+    });
+  </script>
+</body>
 
 </html>
