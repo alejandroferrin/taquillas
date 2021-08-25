@@ -23,7 +23,7 @@
                     </a>
                     <br>
 
-                    <div class="alert alert-warning my-5 large w-50 mx-auto" role="alert">
+                    <div class="alert alert-warning my-5 w-50 mx-auto" role="alert">
                         <strong>Esperando lectura de tarjeta.</strong>
                     </div>
                 </div>
@@ -41,10 +41,11 @@
     <script>
         $(document).ready(function () {
             $(".alert").hide();
-            $("#boton").click(function () {
+            
+        });
+        $("#boton").click(function () {
                 $(".alert").show();
             });
-        });
 
     </script>
 </body>

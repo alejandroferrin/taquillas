@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lector tarjetas</title>
+    <!-- Bootstrap core CSS -->
+    <link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/jquery.ml-keyboard.css" rel="stylesheet">
+    <link href="/css/taquillas.css" rel="stylesheet">
+</head>
+
+<body style="height:100vh;">
+    <header th:insert="fragments.html :: header"></header>
+    <div class="container h-100">
+        <div class="d-flex flex-column justify-content-between h-100 p-4">
+            <div class="">
+                <div th:replace="fragments.html::logo"></div>
+                <h2 class="text-center mt-5">Tarjeta número:</h2>
+                <div class="d-flex justify-content-center mt-5">
+                    <input type="text" th:value="${num_tarjeta}"
+                        class="form-control form-control-lg text-center w-25 mx-2" id="card_num"></input>
+                    <button class="btn btn-warning mx-2" id="copyText">
+                        <svg th:replace="fragments.html :: clipboard"></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--<div th:replace="fragments.html :: footer"></div>-->
+
+
+    <!--   Bootstrap js -->
+    <script src="/webjars/jquery/jquery.min.js"></script>
+    <script src="/webjars/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/public_scripts/jquery.ml-keyboard.min.js"></script>
+    <script src="/public_scripts/keyboard_button.js"></script>
+    <script>
+
+        $("#copyText").click(() => {
+            let copyText = document.getElementById("card_num");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+        });
+
+
+
+    </script>
+</body>
+
+</html>

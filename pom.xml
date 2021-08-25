@@ -11,7 +11,7 @@
     </parent>
     <groupId>com.alex</groupId>
     <artifactId>mvc_taquillas</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.2</version>
     <name>mvc_taquillas</name>
     <description>App que gestiona taquillero</description>
     <properties>

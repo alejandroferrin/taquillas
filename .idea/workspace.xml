@@ -4,52 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29f17810-373f-4d38-af47-966f2c72ed0a" name="Changes" comment="Changes">
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/taquillas/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/taquillas/security/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/addRole_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/addRole_form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/card_reader.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/card_reader.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/close_locker.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/close_locker.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/item_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/item_form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/item_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/item_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/locker_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/locker_form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/not_authorized.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/not_authorized.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/num_tarjeta.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/num_tarjeta.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/serial_ports.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/serial_ports.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user_form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/users_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/users_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/withdrawal_form_card.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/withdrawal_form_card.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/withdrawal_form_manual.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/withdrawal_form_manual.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/withdrawal_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/withdrawal_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/addRole_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/addRole_form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/card_reader.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/card_reader.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/close_locker.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/close_locker.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/fragments.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/fragments.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/item_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/item_form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/item_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/item_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/locker_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/locker_form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/not_authorized.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/not_authorized.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/num_tarjeta.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/num_tarjeta.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/serial_ports.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/serial_ports.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/user_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/user_form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/users_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/users_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/withdrawal_form_card.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/withdrawal_form_card.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/withdrawal_form_manual.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/withdrawal_form_manual.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/withdrawal_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/withdrawal_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mvc_taquillas-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/mvc_taquillas-0.0.1-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/mvc_taquillas-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/mvc_taquillas-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-taquillas.MvcTaquillasApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-taquillas.MvcTaquillasApplicationTests.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/taquillas.MvcTaquillasApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/taquillas.MvcTaquillasApplicationTests.txt" afterDir="false" />
-    </list>
+    <list default="true" id="29f17810-373f-4d38-af47-966f2c72ed0a" name="Changes" comment="Changes" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
