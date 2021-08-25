@@ -132,12 +132,6 @@ La pantalla principal se ha creado con la intención de que se visualice en una 
 
 En esta pantalla el usuario debe presionar el botón con el icono de la tarjeta y a continuación se le pedirá que acerque la tarjeta para ser leída. Una vez identificado el usuario podrá seleccionar el artículo deseado y la cantidad a retirar. Si el usuario cuenta con los permisos para la taquilla que contiene los artículos esta se abrirá y podrán ser retirados.
 
-__Función pegar número de tarjeta en formulario nuevo usuario__
-
-- Esta función requiere de permisos de lectura del clipboard, a falta de ver cómo se puede incorporar en el script de instalación la modificación de permisos en chrome, se puede dar acceso al clipboard a _localhost_ mediante el uso de la extensión [Clipboard Permission Manager](https://chrome.google.com/webstore/detail/clipboard-permission-mana/ipbhneeanpgkaleihlknhjiaamobkceh) 
-
-
-
 #### Zona del administrador del taquillero
 Presionando el botón de Admin accedemos a la zona de administración, en la que se pueden crear usuarios, items, taquillas y consultar las retiradas de material.
 
