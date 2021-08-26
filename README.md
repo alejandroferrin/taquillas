@@ -52,6 +52,7 @@ El sistema permite cablear hasta 20 taquilas, de la salida 0 a la 19.
 (Ejemplo para 2 taquillas)
 
 ![cableado](images/wiring.png)
+![esquema](images/esquema.png)
 ----
 ## Instalación
 

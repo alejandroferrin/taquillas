@@ -10,5 +10,6 @@ import taquillas.model.Role;
 
 @Repository
 public interface RoleRepository extends JpaRepository<Role, Long> {
-	Optional<Role> findByRoleName(RoleName name);
+	//Optional<Role> findByRoleName(RoleName name);
+	Optional<Role> findByRoleName(String name);
 }

@@ -16,32 +16,36 @@ import taquillas.smartcard.CardReader;
 @SpringBootApplication
 public class MvcTaquillasApplication {
 
-	@Autowired
-	private RoleRepository repo;
+    @Autowired
+    private RoleRepository repo;
 
-	@PostConstruct
-	public void init() {
-		List<Role> roles = repo.findAll();
-		if (roles.size() == 0) {
-			Role[] array = {
-				new Role().builder().roleName(RoleName.OPERARIO).build(),
-				new Role().builder().roleName(RoleName.JEFE_EQUIPO).build(),
-				new Role().builder().roleName(RoleName.ADMIN).build()
-			};
-			for (Role role : array) {
-				repo.save(role);
-			}
+    @PostConstruct
+    public void init() {
+        List<Role> roles = repo.findAll();
+        if (roles.size() == 0) {
+            Role[] array = {
+                 new Role().builder().roleName("ADMIN").build()
+                    /*
+                 new Role().builder().roleName(RoleName.OPERARIO).build(),
+                 new Role().builder().roleName(RoleName.JEFE_EQUIPO).build(),
+                 new Role().builder().roleName(RoleName.ADMIN).build()
 
-			System.out.println("#####_Roles creados");
-		} else {
-			System.out.println("#####_Roles existen");
-		}
+                     */
+            };
+            for (Role role : array) {
+                repo.save(role);
+            }
+
+            System.out.println("#####_Roles creados");
+        } else {
+            System.out.println("#####_Roles existen");
+        }
 
 
-	}
+    }
 
-	public static void main(String[] args) {
-		SpringApplication.run(MvcTaquillasApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(MvcTaquillasApplication.class, args);
+    }
 
 }

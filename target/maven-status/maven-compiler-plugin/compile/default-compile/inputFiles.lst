@@ -10,6 +10,8 @@
 /home/alex/Dropbox/SPRING/mvc_taquillas/src/main/java/taquillas/controller/ItemController.java
 /home/alex/Dropbox/SPRING/mvc_taquillas/src/main/java/taquillas/model/dto/converter/WithdrawalDtoConverter.java
 /home/alex/Dropbox/SPRING/mvc_taquillas/src/main/java/taquillas/model/User.java
+/home/alex/Dropbox/SPRING/mvc_taquillas/src/main/java/taquillas/model/dto/converter/RoleDtoConverter.java
+/home/alex/Dropbox/SPRING/mvc_taquillas/src/main/java/taquillas/controller/RoleController.java
 /home/alex/Dropbox/SPRING/mvc_taquillas/src/main/java/taquillas/repository/LockerRepository.java
 /home/alex/Dropbox/SPRING/mvc_taquillas/src/main/java/taquillas/gpio/GPIO_Service_Impl_Pico.java
 /home/alex/Dropbox/SPRING/mvc_taquillas/src/main/java/taquillas/smartcard/CardReader.java
@@ -18,6 +20,7 @@
 /home/alex/Dropbox/SPRING/mvc_taquillas/src/main/java/taquillas/model/Role.java
 /home/alex/Dropbox/SPRING/mvc_taquillas/src/main/java/taquillas/model/dto/converter/UserDtoConverter.java
 /home/alex/Dropbox/SPRING/mvc_taquillas/src/main/java/taquillas/repository/ItemRepository.java
+/home/alex/Dropbox/SPRING/mvc_taquillas/src/main/java/taquillas/model/dto/RoleDto.java
 /home/alex/Dropbox/SPRING/mvc_taquillas/src/main/java/taquillas/model/dto/converter/LockerDtoConverter.java
 /home/alex/Dropbox/SPRING/mvc_taquillas/src/main/java/taquillas/repository/WithdrawalRepository.java
 /home/alex/Dropbox/SPRING/mvc_taquillas/src/main/java/taquillas/repository/UserRepository.java

@@ -23,6 +23,7 @@ public class Role {
 	private long id;
 
 	@NotNull
-	@Enumerated(EnumType.STRING)
-	private RoleName roleName;
+	//@Enumerated(EnumType.STRING)
+	//private RoleName roleName;
+	private String roleName;
 }

@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista usuarios</title>
     <!-- Bootstrap core CSS -->
-    <link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet"> 
+    <link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/jquery.ml-keyboard.css" rel="stylesheet">
     <link href="/css/taquillas.css" rel="stylesheet">
 </head>
@@ -49,6 +49,9 @@
             <a class="btn btn-primary mx-2" th:href="@{/user/new}">
                 <svg th:replace="fragments.html :: new_icon"></svg>
                 Nuevo Usuario</a>
+            <a class="btn btn-secondary mx-2" th:href="@{/role/list}">
+                <svg th:replace="fragments.html :: permission"></svg>
+                Roles</a>
         </div>
 
 

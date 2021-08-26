@@ -1,9 +1,10 @@
 package taquillas.model;
 
 public enum RoleName {
-	OPERARIO,JEFE_EQUIPO,ADMIN;
+	//OPERARIO,JEFE_EQUIPO,ADMIN;
 	
-	
+
+	/*
 	public static Boolean exist(String name) {
         if(name.equals("")) {
             return false;
@@ -16,4 +17,5 @@ public enum RoleName {
         }
         return false;
     }
+	 */
 }
