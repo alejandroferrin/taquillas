@@ -1,5 +1,6 @@
 taquillas/controller/MainController.class
 taquillas/model/dto/UserDto.class
+taquillas/model/dto/RoleDto.class
 taquillas/model/dto/converter/WithdrawalDtoConverter.class
 taquillas/model/RoleName.class
 taquillas/model/dto/converter/LockerDtoConverter.class
@@ -19,8 +20,10 @@ taquillas/controller/LockerController.class
 taquillas/model/dto/ItemDto$ItemDtoBuilder.class
 taquillas/model/User$UserBuilder.class
 taquillas/MvcTaquillasApplication.class
+taquillas/model/dto/converter/RoleDtoConverter.class
 taquillas/model/dto/UserDto$UserDtoBuilder.class
 taquillas/model/Withdrawal$WithdrawalBuilder.class
+taquillas/model/dto/RoleDto$RoleDtoBuilder.class
 taquillas/model/dto/converter/ItemDtoConverter.class
 taquillas/model/dto/LockerDtoAddRole.class
 taquillas/model/Withdrawal.class
@@ -41,6 +44,7 @@ taquillas/gpio/GPIO_Service.class
 taquillas/config/MvcConfig.class
 taquillas/controller/UserController.class
 taquillas/model/dto/converter/UserDtoConverter.class
+taquillas/controller/RoleController.class
 taquillas/model/dto/LockerDto$LockerDtoBuilder.class
 taquillas/model/Role.class
 taquillas/gpio/GPIO_Service_Impl_Pi.class

@@ -3,7 +3,7 @@
 echo "#####################__Creando servicios__"
 sudo sed -i '$d' /etc/rc.local
 sudo echo "sudo systemctl start pcscd" >> /etc/rc.local
-sudo echo "java -jar /home/pi/AppTaquillas/mvc_taquillas-0.0.1-SNAPSHOT.jar --gpio=pi4" >> /etc/rc.local
+sudo echo "java -jar /home/pi/AppTaquillas/mvc_taquillas-0.0.3.jar --gpio=pi4" >> /etc/rc.local
 sudo echo "exit 0" >> /etc/rc.local
 
 sudo echo "[Desktop Entry]" >> /etc/xdg/autostart/app_taquillas.desktop
