@@ -1,5 +1,11 @@
 #!/bin/bash
 
+
+echo "#####################__Docker-Compose up__"
+cd /home/pi/AppTaquillas
+docker-compose up -d
+
+
 echo "#####################__Creando servicios__"
 sudo sed -i '$d' /etc/rc.local
 sudo echo "sudo systemctl start pcscd" >> /etc/rc.local

@@ -7,7 +7,7 @@ echo "#####################__Actualizando__"
 sudo apt-get update && sudo apt-get -y upgrade
 
 echo "#####################__Descargando App taquillas"
-wget -P AppTaquillas/ https://github.com/alejandroferrin/taquillas/raw/main/target/mvc_taquillas-0.0.1-SNAPSHOT.jar
+wget -P AppTaquillas/ https://github.com/alejandroferrin/taquillas/raw/main/target/mvc_taquillas-0.0.3.jar
 
 echo "#####################__Instalando JDK__"
 sudo apt -y install openjdk-8-jdk
@@ -27,6 +27,12 @@ curl -sSL https://pi4j.com/install | sudo bash
 
 #echo "#####################__Instalando wiringpi__"
 #sudo pi4j --wiringpi
+
+echo "#####################__Instalando wiring-pi__"
+git clone https://github.com/WiringPi/WiringPi.git
+cd WiringPi
+sudo chmod +x build
+sudo ./build
 
 echo "#####################__Instalando Docker__"
 curl -fsSL https://get.docker.com -o get-docker.sh

@@ -74,6 +74,7 @@ __Tareas que realiza el script__
 - Instalar librerías funcionamiento smart card reader
 - Instalar drivers ACS
 - Instalar pi4j
+- Instalar WiringPi
 - Instalar docker
 - Dar permisos al usuario en grupo docker
 - Instalar docker-compose
@@ -81,9 +82,9 @@ __Tareas que realiza el script__
 
 Tras la ejecución del script debes apagar y volver a encender la Raspberry y después ejecutar los siguientes comandos __dentro de la carpeta AppTaquillas:__
 
-`sudo pi4j --wiringpi`
+<!--`sudo pi4j --wiringpi`
 
-`docker-compose up -d`
+`docker-compose up -d`-->
 
 `curl -s https://raw.githubusercontent.com/alejandroferrin/taquillas/main/setup_taquillas_final.sh | sudo bash`
 
