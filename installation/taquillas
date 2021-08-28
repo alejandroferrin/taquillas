@@ -1,0 +1,3 @@
+#!/bin/bash
+
+ sudo java -jar /home/pi/AppTaquillas/mvc_taquillas-0.0.3.jar --gpio=pi4

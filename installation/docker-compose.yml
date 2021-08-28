@@ -1,0 +1,24 @@
+version: '3.1'
+services:
+  db:
+    image: jsurf/rpi-mariadb:latest
+    container_name: mariadb
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - TZ=Europe/Madrid
+      - MYSQL_DATABASE=mvc_taquillas
+      - MYSQL_USER=taquillas
+      - MYSQL_PASSWORD=7aqui11as
+    volumes:
+      - /home/pi/database_data:/var/lib/mysql:rw
+    ports:
+      - 3306:3306
+    restart: always
+
+  phpmyadmin:
+    image: phpmyadmin
+    restart: always
+    ports:
+      - 8080:80
+    environment:
+      - PMA_ARBITRARY=1

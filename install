@@ -1,0 +1,14 @@
+#!/bin/bash
+
+wget -P /home/pi/AppTaquillas/ https://raw.githubusercontent.com/alejandroferrin/taquillas/main/installation/setup_taquillas.sh
+wget -P /home/pi/AppTaquillas/ https://raw.githubusercontent.com/alejandroferrin/taquillas/main/installation/setup_taquillas_final.sh
+wget -P /home/pi/AppTaquillas/ https://raw.githubusercontent.com/alejandroferrin/taquillas/main/installation/docker-compose.yml
+wget -P /home/pi/AppTaquillas/ https://raw.githubusercontent.com/alejandroferrin/taquillas/main/installation/app_taquillas.desktop
+wget -P /home/pi/AppTaquillas/ https://raw.githubusercontent.com/alejandroferrin/taquillas/main/installation/taquillas.service
+wget -P /home/pi/AppTaquillas/ https://raw.githubusercontent.com/alejandroferrin/taquillas/main/installation/taquillas
+
+sudo chmod +x /home/pi/AppTaquillas/setup_taquillas.sh
+sudo chmod +x /home/pi/AppTaquillas/setup_taquillas_final.sh
+
+sudo /home/pi/AppTaquillas/setup_taquillas.sh
+

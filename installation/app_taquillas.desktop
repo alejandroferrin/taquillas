@@ -1,0 +1,4 @@
+[Desktop Entry]
+Name=AppTaquillas
+Exec=chromium-browser "http://localhost:9000" --kiosk 
+

@@ -64,9 +64,13 @@ Asigna una IP fija a la Raspberry [tutorial](https://raspberryparanovatos.com/tu
 
 Comando instalación:
 
-`curl -s https://raw.githubusercontent.com/alejandroferrin/taquillas/main/setup_taquillas.sh | sudo bash`
+`curls -s https://raw.githubusercontent.com/alejandroferrin/taquillas/main/install | sudo bash`
 
-__Tareas que realiza el script__
+Tras la ejecución del script debes apagar y volver a encender la Raspberry y después ejecutar el siguiente comando:
+
+`sudo /home/pi/AppTaquillas/setup_taquillas_final.sh`
+
+__Tareas que realizan el script__
 
 - Crear carpeta AppTaquillas
 - Actualizar sistema
@@ -79,28 +83,14 @@ __Tareas que realiza el script__
 - Dar permisos al usuario en grupo docker
 - Instalar docker-compose
 - Crear el archivo docker-compose.yml
+- Levantar contenedores docker
+- Ejecutar la aplicación al encender el sistema
 
-Tras la ejecución del script debes apagar y volver a encender la Raspberry y después ejecutar los siguientes comandos __dentro de la carpeta AppTaquillas:__
-
-<!--`sudo pi4j --wiringpi`
-
-`docker-compose up -d`-->
-
-`curl -s https://raw.githubusercontent.com/alejandroferrin/taquillas/main/setup_taquillas_final.sh | sudo bash`
-
-
-Esto levantará los contenedores docker con la base de datos y el administrador de bases de datos al cual podrás acceder a través del navegador en el puerto _8080_
-
-También se crea el servicio que inicia la aplicación al reiniciar.
-
+En el proceso se instala un administrador de bases de datos al cual podrás acceder a través del navegador en el puerto _8080_
 
 Debes volver a reiniciar el equipo para que la aplicación detecte la base de datos al ejecutarse.
 
-Para cambiar los argumentos de la ejecución del servicio puedes modificar  el archivo __/etc/rc.local__
-
-En concreto la linea:
-
-`java -jar /home/pi/AppTaquillas/mvc_taquillas-0.0.1-SNAPSHOT.jar --gpio=pi4`
+Para cambiar los argumentos de la ejecución del servicio puedes modificar  el archivo __taquillas__
 
 Por ejemplo para la ejecución con cambio de contraseña deberías añadir:
 
@@ -143,7 +133,7 @@ El password puede cambiarse si al ejecutar el programa lo hacemos con el argumen
 
 - Ejemplo:
 
-`java -jar mvc_taquillas-0.0.1-SNAPSHOT.jar --admin_password=1234`
+`java -jar mvc_taquillas-0.0.3.jar --admin_password=1234`
 
 
 ### Argumentos
