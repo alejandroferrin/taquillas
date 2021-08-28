@@ -11,7 +11,7 @@ sudo echo "sudo systemctl start pcscd" >> /etc/rc.local
 sudo echo "exit 0" >> /etc/rc.local
 
 sudo cp /home/pi/AppTaquillas/app_taquillas.desktop /etc/xdg/autostart/
-sudo cp /home/pi/AppTaquillas/app_taquillas.service /etc/systemd/system/
+sudo cp /home/pi/AppTaquillas/taquillas.service /etc/systemd/system/
 sudo chmod +x /home/pi/AppTaquillas/taquillas
 sudo systemctl daemon-reload
 sudo systemctl enable taquillas.service

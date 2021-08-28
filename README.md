@@ -64,7 +64,7 @@ Asigna una IP fija a la Raspberry [tutorial](https://raspberryparanovatos.com/tu
 
 Comando instalación:
 
-`curls -s https://raw.githubusercontent.com/alejandroferrin/taquillas/main/install | sudo bash`
+`curl -s https://raw.githubusercontent.com/alejandroferrin/taquillas/main/install | sudo bash`
 
 Tras la ejecución del script debes apagar y volver a encender la Raspberry y después ejecutar el siguiente comando:
 
