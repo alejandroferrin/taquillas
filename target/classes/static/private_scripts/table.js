@@ -290,7 +290,7 @@ class RdataTB {
         let footer = '';
         for (let I = 0; I < this.HeaderDataTable.length; I++) {
             header += `<th style="cursor: pointer;" id="${this.HeaderDataTable[I]}_header" class="columns tablesorter-header">${this.HeaderDataTable[I]}</th>\n`;
-            footer += `<th style="cursor: pointer;" id="${this.HeaderDataTable[I]}_footer" class="text-light">${this.HeaderDataTable[I]}</th>\n`;
+            footer += `<th style="cursor: pointer;" id="${this.HeaderDataTable[I]}_footer" class="text-transparent">${this.HeaderDataTable[I]}</th>\n`;
         }
         // RowDataTable To Element
         const ifUndefinded = (this.DataToRender === undefined) ? 0 : this.DataToRender.length;

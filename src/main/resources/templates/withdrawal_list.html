@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista retiradas</title>
     <!-- Bootstrap core CSS -->
-    <link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<!--     <link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link href="/css/bootstrap.css" rel="stylesheet">
     <link href="/css/jquery.ml-keyboard.css" rel="stylesheet">
     <link href="/css/taquillas.css" rel="stylesheet">
 </head>
@@ -19,7 +20,7 @@
         <h3 class="my-4 text-center">Retiradas</h3>
         <!-- <input class="form-control mt-3 w-25" type="text" id="myInput"
                    onkeyup="search()" placeholder="Buscar...">-->
-        <table id="myTable" class="table table-light table-striped my-4 text-center">
+        <table id="myTable" class="table my-4 text-center">
             <thead>
                 <tr>
                     <th>Time_stamp</th>
@@ -51,7 +52,7 @@
             <a class="btn btn-primary mx-2" th:href="@{/withdrawal/new}">
                 <svg th:replace="fragments.html :: new_icon"></svg>
                 Nueva Retirada</a>
-            <button class="btn btn-warning mx-2" id="csv">
+            <button class="btn btn-success mx-2" id="csv">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                     class="bi bi-download" viewBox="0 0 16 16">
                     <path

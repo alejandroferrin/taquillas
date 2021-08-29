@@ -7,17 +7,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cerrar taquilla</title>
   <!-- Bootstrap core CSS -->
-  <link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<!--   <link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link href="/css/bootstrap.css" rel="stylesheet">
 </head>
 
 <body style="height:100vh;">
 
-  <div class="container h-100">
-    <div class="d-flex flex-column justify-content-between h-100 p-4">
+  <div class="h-100">
+    <div class="d-flex flex-column justify-content-between h-100">
       <div class="">
         <div th:replace="fragments.html::logo"></div>
         <h2 class="text-center mt-5">Ya puedes coger el artículo</h2>
-        <h2 class="text-center mt-5 rounded bg-light shadow w-25 p-3 mx-auto" th:text="|Taquilla nº ${lockerNumber}|">
+        <h2 class="text-center mt-5 rounded bg-blue text-yellow shadow w-25 p-3 mx-auto" th:text="|Taquilla nº ${lockerNumber}|">
         </h2>
         <h3 class="text-center mt-5">Presiona el botón para cerrar la taquilla cuando acabes</h3>
         <div class="w-100 text-center">

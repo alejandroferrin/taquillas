@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista usuarios</title>
     <!-- Bootstrap core CSS -->
-    <link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<!--     <link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link href="/css/bootstrap.css" rel="stylesheet">
     <link href="/css/jquery.ml-keyboard.css" rel="stylesheet">
     <link href="/css/taquillas.css" rel="stylesheet">
 </head>
@@ -17,7 +18,7 @@
     <header th:insert="fragments.html :: header"> </header>
     <div class="container">
         <h3 class="my-4 text-center">Usuarios</h3>
-        <table id="myTable" class="table table-light table-striped my-4 text-center">
+        <table id="myTable" class="table my-4 text-center">
             <thead>
                 <tr>
                     <th>Nombre</th>
@@ -33,7 +34,7 @@
                     <td th:text="${element.name}"></td>
                     <td th:text="${element.number}"></td>
                     <td th:text="${element.role.roleName}"></td>
-                    <td><a class="btn btn-success" th:href="@{/withdrawal/list/byUser/{id}(id=${element.id})}"><svg
+                    <td><a class="btn btn-secondary" th:href="@{/withdrawal/list/byUser/{id}(id=${element.id})}"><svg
                                 th:replace="fragments.html :: arrow_icon"></svg></a></td>
                     <td><a class="btn btn-warning" th:href="@{/user/edit/{id}(id=${element.id})}"> <svg
                                 th:replace="fragments.html :: edit_icon"></svg> </a></td>
@@ -49,7 +50,7 @@
             <a class="btn btn-primary mx-2" th:href="@{/user/new}">
                 <svg th:replace="fragments.html :: new_icon"></svg>
                 Nuevo Usuario</a>
-            <a class="btn btn-secondary mx-2" th:href="@{/role/list}">
+            <a class="btn btn-success mx-2" th:href="@{/role/list}">
                 <svg th:replace="fragments.html :: permission"></svg>
                 Roles</a>
         </div>

@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista items</title>
     <!-- Bootstrap core CSS -->
-    <link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<!--     <link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link href="/css/bootstrap.css" rel="stylesheet">
     <link href="/css/jquery.ml-keyboard.css" rel="stylesheet">
     <link href="/css/taquillas.css" rel="stylesheet">
 </head>
@@ -17,7 +18,7 @@
     <header th:insert="fragments.html :: header"> </header>
     <div class="container">
         <h3 class="my-4 text-center">Items</h3>
-        <table id="myTable" class="table table-light table-striped my-4 text-center">
+        <table id="myTable" class="table my-4 text-center">
             <thead>
                 <tr>
                     <th>Código</th>
@@ -35,7 +36,7 @@
                     <td th:text="${element.denominacion}"></td>
                     <td th:text="${element.existencias}"></td>
                     <td th:text="${element.locker.number}"></td>
-                    <td><a class="btn btn-success" th:href="@{/withdrawal/list/byItem/{id}(id=${element.id})}"><svg
+                    <td><a class="btn btn-secondary" th:href="@{/withdrawal/list/byItem/{id}(id=${element.id})}"><svg
                                 th:replace="fragments.html :: arrow_icon"></svg></a></td>
                     <td><a class="btn btn-warning" th:href="@{/item/edit/{id}(id=${element.id})}"><svg
                                 th:replace="fragments.html :: edit_icon"></svg></a></td>

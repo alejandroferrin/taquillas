@@ -5,24 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="29f17810-373f-4d38-af47-966f2c72ed0a" name="Changes" comment="Changes">
-      <change afterPath="$PROJECT_DIR$/src/main/java/taquillas/controller/RoleController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/taquillas/model/dto/RoleDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/taquillas/model/dto/converter/RoleDtoConverter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/taquillas/MvcTaquillasApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/taquillas/MvcTaquillasApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/taquillas/model/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/taquillas/model/Role.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/taquillas/model/RoleName.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/taquillas/model/RoleName.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/taquillas/model/dto/converter/LockerDtoConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/taquillas/model/dto/converter/LockerDtoConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/taquillas/repository/RoleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/taquillas/repository/RoleRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/bootswatch/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/users_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/users_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/taquillas/MvcTaquillasApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/taquillas/MvcTaquillasApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/taquillas/model/Role$RoleBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/taquillas/model/Role$RoleBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/taquillas/model/Role.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/taquillas/model/Role.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/taquillas/model/RoleName.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/taquillas/model/RoleName.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/taquillas/model/dto/converter/LockerDtoConverter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/taquillas/model/dto/converter/LockerDtoConverter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/taquillas/repository/RoleRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/taquillas/repository/RoleRepository.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +33,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
