@@ -1,0 +1,21 @@
+@font-face {
+  font-family: taquillas;
+  src: url(LeagueSpartan-Bold.otf);
+}
+
+body{
+  font-family: taquillas, Helvetica, Arial, sans-serif !important;
+}
+
+.bg-blue{
+  background-color: #033E8C !important;
+}
+.bg-yellow{
+  background-color: #F2C029 !important;
+}
+.text-yellow{
+  color:#F2C029 !important;
+}
+.text-blue{
+  color: #033E8C !important;
+}

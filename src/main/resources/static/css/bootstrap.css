@@ -4643,9 +4643,6 @@ fieldset:disabled .btn {
   background-color: rgba(0, 0, 0, 0.03);
   border-top: 1px solid rgba(0, 0, 0, 0.125);
 }
-.card-footer:last-child {
-  border-radius: 0 - 1px);
-}
 
 .card-header-tabs {
   margin-right: -0.5rem;
