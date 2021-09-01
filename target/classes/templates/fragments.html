@@ -6,10 +6,9 @@
 
 </head>
 
-<body>
+<body class="bg-light">
 
-
-  <button id="show_keyboard" class="btn btn-outline-warning" th:fragment="keyboard_button">
+  <button id="show_keyboard" class="btn btn-outline-secondary" th:fragment="keyboard_button">
     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-keyboard"
       viewBox="0 0 16 16">
       <path
@@ -20,11 +19,11 @@
   </button>
 
   <div th:fragment="header">
-    <nav class="navbar navbar-expand-lg navbar-light bg-header py-3"
+    <nav class="navbar navbar-expand-lg bg-primary py-2 border border-secondary border-4 shadow"
       style="position: fixed; top:0; right:0; left:0; z-index:1030;">
       <div class="container-fluid">
         <a th:href="@{/}"><img src="/images/icono_taquillas.svg" alt="alt" height="30" /></a>
-        <a class="navbar-brand mx-2" th:href="@{/}">TAQUILLAS</a>
+        <a class="navbar-brand mx-2 fw-bolder text-light" th:href="@{/}">TAQUILLAS</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -41,9 +40,9 @@
             <li class="nav-item"><a class="nav-link" th:href="@{/locker/serial_ports}">Ports</a></li>
           </ul>
           <div class="d-flex justify-content-end w-100">
-            <form th:action="@{/logout}" method="post" class="text-yellow">
+            <form th:action="@{/logout}" method="post" class="mx-3">
               <input type="submit" value="Logout" hidden="true" />
-              <button class="btn text-yellow" type="submit">Logout</button>
+              <button class="btn larger text-light" type="submit">Logout</button>
             </form>
             <button th:replace="fragments.html :: keyboard_button"> </button>
           </div>
@@ -54,12 +53,12 @@
   </div>
 
   <div th:fragment="logo" class="w-100">
-    <div class="d-flex flex-row align-items-start justify-content-center px-4 py-5 bg-header rounded w-100 mx-auto">
+    <div class="d-flex flex-row align-items-start justify-content-center mt-5 w-100 mx-auto">
       <a class="link-dark mx-2 " th:href="@{/}">
         <img src="/images/icono_taquillas.svg" alt="alt" height="75" class="shadow" />
       </a>
       <a class="link-dark mx-2" th:href="@{/}">
-        <div class="display-1 text-title"><strong>TAQUILLAS</strong></div>
+        <div class="display-2 text-light fw-bolder"><strong>TAQUILLAS</strong></div>
       </a>
     </div>
   </div>
@@ -137,9 +136,9 @@
     <path d="M2 10a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-1z" />
   </svg>
 
-  <footer th:fragment="footer" class="fixed-bottom py-1 bg-light">
+  <footer th:fragment="footer" class="fixed-bottom">
     <div class="text-center">
-      <span class="text-muted small">AFM 2021</span>
+<!--       <span class="text-secondary small">AFM 2021</span> -->
     </div>
   </footer>
 

@@ -1,10 +1,9 @@
 package taquillas.controller;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.validation.Valid;
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -15,7 +14,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import taquillas.gpio.GPIO_Service;
 import taquillas.model.Item;
-
 import taquillas.model.Withdrawal;
 import taquillas.model.dto.WithdrawalDto;
 import taquillas.model.dto.converter.WithdrawalDtoConverter;
@@ -50,12 +48,18 @@ public class WithdrawalController {
 
   @GetMapping("/card")
   public String redirect(Model model) {
-    String cardNumber = cardReader.getRead();
-    WithdrawalDto dto = new WithdrawalDto().builder()
-      .userNumber(cardNumber).build();
-    model.addAttribute("withdrawalForm", dto);
-    model.addAttribute("itemsList", itemRepo.findAll());
-    return "withdrawal_form_card";
+    String cardNumber;
+    try {
+      cardNumber = cardReader.getRead();
+      WithdrawalDto dto = new WithdrawalDto().builder()
+        .userNumber(cardNumber).build();
+      model.addAttribute("withdrawalForm", dto);
+      model.addAttribute("itemsList", itemRepo.findAll());
+      return "withdrawal_form_card";
+    } catch (Exception ex) {
+      return "redirect:/";
+    }
+
   }
 
   @GetMapping("/new")
@@ -81,7 +85,7 @@ public class WithdrawalController {
         Item item = itemRepo.findById(newElement.getItemId()).orElse(null);
         if (item != null) {
 
-            gpio.open(item.getLocker().getNumber());
+          gpio.open(item.getLocker().getNumber());
 
           model.addAttribute("lockerNumber", item.getLocker().getNumber());
         }
@@ -98,7 +102,7 @@ public class WithdrawalController {
     Item item = itemRepo.findById(id).orElse(null);
     if (item != null) {
 
-        gpio.close(item.getLocker().getNumber());
+      gpio.close(item.getLocker().getNumber());
 
     }
     return "redirect:/";

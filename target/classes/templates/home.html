@@ -7,28 +7,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Taquillas</title>
     <!-- Bootstrap core CSS -->
-    <!--         <link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/bootstrap.css" rel="stylesheet">
 </head>
 
-<body style="height:100vh;">
+<body style="height:100vh;" class="border border-secondary border-5 bg-primary">
     <div class="h-100">
         <div class="d-flex flex-column justify-content-between h-100">
             <div class="">
                 <div th:replace="fragments.html::logo"></div>
-                <h1 class="text-center mt-5">Presione el botón y luego acerque la tarjeta al lector.</h1>
+                <h1 class="text-center mt-5 text-light">Presione el botón y luego acerque la tarjeta al lector.</h1>
                 <div class="w-100 text-center">
-                    <a th:href="@{/withdrawal/card}" class="btn btn-warning btn-lg py-5 mt-5 shadow w-25" id="boton">
+                    <a th:href="@{/withdrawal/card}" class="btn btn-warning py-5 mt-5 shadow w-25 text-white"
+                        id="boton">
                         <svg th:replace="fragments.html :: card"></svg>
                     </a>
                     <br>
 
-                    <div class="alert alert-danger my-5 w-25 mx-auto" role="alert">
+                    <div class="alert alert-primary my-5 w-25 mx-auto" role="alert">
                         <strong>Esperando lectura de tarjeta.</strong>
                     </div>
                 </div>
             </div>
-            <div class="text-center"><a th:href="@{/user/list}" class="btn btn-danger m-3">Admin</a></div>
+            <div class="text-center"><a th:href="@{/user/list}" class="btn btn-danger m-3 fw-bold fs-5 shadow">Admin</a></div>
         </div>
     </div>
 

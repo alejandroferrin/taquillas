@@ -7,22 +7,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cerrar taquilla</title>
   <!-- Bootstrap core CSS -->
-<!--   <link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
+  <link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/bootstrap.css" rel="stylesheet">
 </head>
 
-<body style="height:100vh;">
+<body style="height:100vh;" class="border border-secondary border-5 bg-primary">
 
   <div class="h-100">
     <div class="d-flex flex-column justify-content-between h-100">
       <div class="">
         <div th:replace="fragments.html::logo"></div>
-        <h2 class="text-center mt-5">Ya puedes coger el artículo</h2>
-        <h2 class="text-center mt-5 rounded bg-blue text-yellow shadow w-25 p-3 mx-auto" th:text="|Taquilla nº ${lockerNumber}|">
+        <h2 class="text-center mt-5 text-light">Ya puedes coger el artículo</h2>
+        <h2 class="text-center mt-5 bg-light text-primary shadow w-25 p-3 mx-auto" th:text="|Taquilla nº ${lockerNumber}|">
         </h2>
-        <h3 class="text-center mt-5">Presiona el botón para cerrar la taquilla cuando acabes</h3>
+        <h3 class="text-center mt-5 text-light">Presiona el botón para cerrar la taquilla cuando acabes</h3>
         <div class="w-100 text-center">
-          <a th:href="@{/withdrawal/close/{id}(id=${itemId})}" class="btn btn-warning btn-lg p-4 mt-5 shadow"
+          <a th:href="@{/withdrawal/close/{id}(id=${itemId})}" class="btn btn-warning p-4 mt-5 shadow"
             id="boton"><svg th:fragment="close_lock" xmlns="http://www.w3.org/2000/svg" width="65" height="65"
               fill="currentColor" class="bi bi-lock" viewBox="0 0 16 16">
               <path
@@ -33,7 +33,7 @@
     </div>
   </div>
 
-  <div th:replace="fragments.html :: footer"></div>
+<!--   <div th:replace="fragments.html :: footer"></div> -->
 
 
   <!--   Bootstrap js -->

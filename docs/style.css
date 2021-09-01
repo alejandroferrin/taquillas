@@ -4,18 +4,16 @@
 }
 
 body{
-  font-family: taquillas, Helvetica, Arial, sans-serif !important;
+  font-family: taquillas, Helvetica, Arial, sans-serif;
+  background-color: rgb(243, 243, 243);
 }
 
-.bg-blue{
-  background-color: #033E8C !important;
+.bg-red{
+  background-color: #B73F36;
 }
 .bg-yellow{
-  background-color: #F2C029 !important;
+  background-color: #F2C029;
 }
 .text-yellow{
-  color:#F2C029 !important;
-}
-.text-blue{
-  color: #033E8C !important;
+  color:#F2C029;
 }
