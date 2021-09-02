@@ -14,35 +14,58 @@ Si no se puede correr sobre una __Raspberry Pi 4__ porque la política de la emp
 
 
 
-__Material__
+__Material para 12 taquillas__
 
-- Raspberry Pi 4 o Raspberry Pi pico + pc (windows o linux)
-- Lector tarjetas NFC ACS - [ACR122U](https://www.acs.com.hk/en/products/3/acr122u-usb-nfc-reader/) 
-- Cerraduras electricas 12v
+![fotos_material](images/material.png)
 
-![cerradura](images/cerradura.png)
+_(Los links son SIN enlace de afiliado)_
 
-- Leds 12v
+- __A__ [Kit Raspberry Pi 4 4GB](https://es.rs-online.com/web/p/raspberry-pi/2007275) (x1)
 
-![led](images/led.png)
+- __B__ [Relé 16 canales 5V](https://es.aliexpress.com/item/4000222568835.html?spm=a2g0o.productlist.0.0.335c6cf4dRP2Dj&algo_pvid=2d5e2ea5-c720-474f-b1a5-0c4bc8ff43b3&algo_exp_id=2d5e2ea5-c720-474f-b1a5-0c4bc8ff43b3-0) (x1)
 
-- Fuente alimentación 12v
+- __C__ [Pantalla táctil 10"](https://www.amazon.es/port%C3%A1til-Kenowa-Seguridad-autom%C3%B3vil-Raspberry/dp/B07Z3KQ7W3/ref=sr_1_23?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=monitor%2Btactil&qid=1630531056&sr=8-23&th=1) (x1)
 
-![fuente](images/fuente.png)
+- __D__ [Carrete cable 2 x 0,4 (100m)](https://es.rs-online.com/web/p/cables-para-altavozes/7140316/) (x1)
 
-- Relés 5v
+- __E__ [Terminal Carril DIN](https://es.rs-online.com/web/p/bloques-terminales-de-carril-din/0424759/) (x30)
 
-![relés](images/reles.png)
+- __F__ [Lector tarjetas NFC](https://www.amazon.es/Escritor-inteligente-grabador-tarjetas-inteligentes/dp/B07X55CL4S/ref=sr_1_38?dchild=1&keywords=ACR122U&qid=1629795588&refinements=p_36%3A-4200&rnid=1323854031&sr=8-38)  (x1)
 
-- Taquillas
+Lector tarjetas NFC ACS - [ACR122U](https://www.acs.com.hk/en/products/3/acr122u-usb-nfc-reader/) 
 
-![taquillas](images/taquillas_foto.png)
+- __G__ [Fuente alimentación 12v](https://es.rs-online.com/web/p/fuentes-de-alimentacion-de-modo-conmutado-smps-integradas/1618279) (x1)
 
-- Pantalla táctil
+- __H__ [Led 12v Azul (lote 10uds)](https://es.aliexpress.com/item/32846667191.html?spm=a2g0o.productlist.0.0.7eb74882lJd4wd&algo_pvid=df869be4-987b-426e-8608-a84e5cdbd340&algo_exp_id=df869be4-987b-426e-8608-a84e5cdbd340-0) (x2)
 
-![pantalla](images/pantalla.png)
+- __I__ [Cerradura eléctrica 12V](https://es.aliexpress.com/item/1005003041096259.html?algo_pvid=153a07d1-c755-40ba-be67-aa2aed980ff8&aem_p4p_detail=202108242351002626565485788390023359290&algo_exp_id=153a07d1-c755-40ba-be67-aa2aed980ff8-4)  (x12)
 
-- Cableado, Carcasa...
+- __J__ [Ventilador 12V (2uds)](https://www.amazon.es/Festnight-Ventilador-refrigeraci%C3%B3n-silencioso-40x40x10mm/dp/B095PG52QF/ref=sr_1_2_sspa?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=ventilador%2B12v%2B40x40&qid=1630562391&sr=8-2-spons&smid=A22QWS75KXF5J0&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUFVVzlOUFFNOVRFMUsmZW5jcnlwdGVkSWQ9QTAyNzg3ODZPOEJUS0dRU1hIUDMmZW5jcnlwdGVkQWRJZD1BMDkzMDIwNTNVSUdIUlJOTklEWVQmd2lkZ2V0TmFtZT1zcF9hdGYmYWN0aW9uPWNsaWNrUmVkaXJlY3QmZG9Ob3RMb2dDbGljaz10cnVl&th=1) (x1)
+
+- __K__ [Cable jumper female-female](https://es.aliexpress.com/item/4000204863216.html?spm=a2g0o.productlist.0.0.43a05fdaCym1zF&algo_pvid=84528e71-9fde-401f-9ca0-051ac59dd1d5&algo_exp_id=84528e71-9fde-401f-9ca0-051ac59dd1d5-1) (x1)
+
+- __L__ [Separadores PCB](https://es.rs-online.com/web/p/pilares-de-soporte-para-pcb/0220822) (x8)
+
+- __M__ [Interruptor](https://es.rs-online.com/web/p/interruptores-de-balancin/1977692) (x1)
+
+- __N__ [Toma corriente](https://es.rs-online.com/web/p/conectores-iec/0488191A/) (x1)
+
+- __O__ [Cable alimentación 5m](https://es.rs-online.com/web/p/cables-de-alimentacion-para-equipos/6151154) (x1)
+- __P__ [Jumpers p/bloque terminal](https://es.rs-online.com/web/p/accesorios-para-terminal-de-carril-din/8787581/?origin=PSF_435779|alt) (x5)
+
+- __Q__ [Carril DIN 500 mm](https://es.rs-online.com/web/p/carriles-din/0467406/) (x1)
+
+- __R__ [Rejilla ventilador](https://es.rs-online.com/web/p/guardamanos/7373960/) (x2)
+
+- __S__ [Caja 400x300x150](https://es.rs-online.com/web/p/cajas-de-pared/7755798) (x1)
+
+- __T__ [Regleta 220v](https://es.rs-online.com/web/p/conectores-hembra-de-bajada-y-distribucion-electrica/1484651) (x1)
+
+- __U__ [Disipadores calor Rpi 4](https://es.rs-online.com/web/p/placas-hat-y-complementos-para-raspberry-pi/2020460) (x1)
+
+- __V__ [Cable alimentación 500mm](https://es.rs-online.com/web/p/cables-de-alimentacion-para-equipos/1469115) (x1)
+
+- [Taquillas](https://www.amazon.es/compartimento-taquilla-Compartimiento-revestimiento-Antracita/dp/B07BZKZ557/ref=sr_1_32?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=taquillas+12&qid=1630611007&sr=8-32) 
 
 ----
 ## Esquema
@@ -52,6 +75,7 @@ El sistema permite cablear hasta 20 taquilas, de la salida 0 a la 19.
 (Ejemplo para 2 taquillas)
 
 ![cableado](images/wiring.png)
+
 ![esquema](images/esquema.png)
 ----
 ## Instalación
