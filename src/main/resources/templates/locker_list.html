@@ -23,7 +23,7 @@
                 <tr>
                     <th>Número</th>
                     <th>Abrir</th>
-                    <th>Cerrar</th>
+                    <!--<th>Cerrar</th>-->
                     <th>Retiradas</th>
                     <th>Editar</th>
                     <th>Eliminar</th>
@@ -36,8 +36,8 @@
                                th:href="@{/locker/open/{number}(number=${element.number})}">Abrir</a></td>-->
                     <td><a class="btn btn-success" th:onclick="'$.get(\'/locker/open/'+${element.number}+'\')'"><svg
                                 th:replace="fragments.html :: open_lock"></svg></a></td>
-                    <td><a class="btn btn-danger" th:onclick="'$.get(\'/locker/close/'+${element.number}+'\')'"><svg
-                                th:replace="fragments.html :: close_lock"></svg></a></td>
+                    <!--<td><a class="btn btn-danger" th:onclick="'$.get(\'/locker/close/'+${element.number}+'\')'"><svg
+                                th:replace="fragments.html :: close_lock"></svg></a></td>-->
                     <!--<td><a class="btn btn-danger"
                                th:href="@{/locker/close/{number}(number=${element.number})}">Cerrar</a></td>-->
                     <td><a class="btn btn-secondary" th:href="@{/withdrawal/list/byLocker/{id}(id=${element.id})}"><svg

@@ -20,7 +20,7 @@ __Material para 12 taquillas__
 
 _(Los links son SIN enlace de afiliado)_
 
-- __A__ [Kit Raspberry Pi 4 4GB](https://es.rs-online.com/web/p/raspberry-pi/2007275) (x1)
+- __A__ [Raspberry Pi 4 4GB](https://es.rs-online.com/web/p/raspberry-pi/1822096) (x1)
 
 - __B__ [Relé 16 canales 5V](https://es.aliexpress.com/item/4000222568835.html?spm=a2g0o.productlist.0.0.335c6cf4dRP2Dj&algo_pvid=2d5e2ea5-c720-474f-b1a5-0c4bc8ff43b3&algo_exp_id=2d5e2ea5-c720-474f-b1a5-0c4bc8ff43b3-0) (x1)
 
@@ -34,21 +34,21 @@ _(Los links son SIN enlace de afiliado)_
 
 Lector tarjetas NFC ACS - [ACR122U](https://www.acs.com.hk/en/products/3/acr122u-usb-nfc-reader/) 
 
-- __G__ [Fuente alimentación 12v](https://es.rs-online.com/web/p/fuentes-de-alimentacion-de-modo-conmutado-smps-integradas/1618279) (x1)
+- __G__ [Fuente alimentación 5V DIN](https://es.rs-online.com/web/p/fuentes-de-alimentacion-de-montaje-en-carril-din/1368304) (x1)
 
-- __H__ [Led 12v Azul (lote 10uds)](https://es.aliexpress.com/item/32846667191.html?spm=a2g0o.productlist.0.0.7eb74882lJd4wd&algo_pvid=df869be4-987b-426e-8608-a84e5cdbd340&algo_exp_id=df869be4-987b-426e-8608-a84e5cdbd340-0) (x2)
+- __H__ [Cable HDMI a micro HDMI](https://es.rs-online.com/web/p/cables-para-raspberry-pi/1871377/) (x1)
 
-- __I__ [Cerradura eléctrica 12V](https://es.aliexpress.com/item/1005003041096259.html?algo_pvid=153a07d1-c755-40ba-be67-aa2aed980ff8&aem_p4p_detail=202108242351002626565485788390023359290&algo_exp_id=153a07d1-c755-40ba-be67-aa2aed980ff8-4)  (x12)
+- __I__ [Cerradura eléctrica 5V](https://es.aliexpress.com/item/1005003038262076.html?spm=a2g0o.cart.0.0.556f3c00RlUl5S&mp=1)  (x12)
 
-- __J__ [Ventilador 12V (2uds)](https://www.amazon.es/Festnight-Ventilador-refrigeraci%C3%B3n-silencioso-40x40x10mm/dp/B095PG52QF/ref=sr_1_2_sspa?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=ventilador%2B12v%2B40x40&qid=1630562391&sr=8-2-spons&smid=A22QWS75KXF5J0&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUFVVzlOUFFNOVRFMUsmZW5jcnlwdGVkSWQ9QTAyNzg3ODZPOEJUS0dRU1hIUDMmZW5jcnlwdGVkQWRJZD1BMDkzMDIwNTNVSUdIUlJOTklEWVQmd2lkZ2V0TmFtZT1zcF9hdGYmYWN0aW9uPWNsaWNrUmVkaXJlY3QmZG9Ob3RMb2dDbGljaz10cnVl&th=1) (x1)
+- __J__ [Ventilador 5V (2uds)](https://www.amazon.es/GeeekPi-Piezas-Raspberry-Ventilador-escobillas/dp/B07X37NXGX/ref=sr_1_7?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=ventilador%2B5v&qid=1630653379&sr=8-7&th=1) (x1)
 
 - __K__ [Cable jumper female-female](https://es.aliexpress.com/item/4000204863216.html?spm=a2g0o.productlist.0.0.43a05fdaCym1zF&algo_pvid=84528e71-9fde-401f-9ca0-051ac59dd1d5&algo_exp_id=84528e71-9fde-401f-9ca0-051ac59dd1d5-1) (x1)
 
 - __L__ [Separadores PCB](https://es.rs-online.com/web/p/pilares-de-soporte-para-pcb/0220822) (x8)
 
-- __M__ [Interruptor](https://es.rs-online.com/web/p/interruptores-de-balancin/1977692) (x1)
+- __M__ [Toma alimentación](https://es.rs-online.com/web/p/conectores-iec/8117210/) (x1)
 
-- __N__ [Toma corriente](https://es.rs-online.com/web/p/conectores-iec/0488191A/) (x1)
+- __N__ [Tarjeta micro SD 32GB](https://es.rs-online.com/web/p/tarjetas-micro-sd/2034765) (x1)
 
 - __O__ [Cable alimentación 5m](https://es.rs-online.com/web/p/cables-de-alimentacion-para-equipos/6151154) (x1)
 - __P__ [Jumpers p/bloque terminal](https://es.rs-online.com/web/p/accesorios-para-terminal-de-carril-din/8787581/?origin=PSF_435779|alt) (x5)

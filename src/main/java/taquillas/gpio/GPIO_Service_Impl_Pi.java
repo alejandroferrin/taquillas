@@ -65,14 +65,15 @@ public class GPIO_Service_Impl_Pi implements GPIO_Service {
   @Override
   public void open(int taquillaNumber) {
     System.out.println("Pi_ Taquilla Abierta nº: " + taquillaNumber);
-    gpioList.get(taquillaNumber - 1).high();
+    gpioList.get(taquillaNumber - 1).pulse(500,true);
+    //gpioList.get(taquillaNumber - 1).high();
 
   }
 
   @Override
   public void close(int taquillaNumber) {
-    System.out.println("Pi_ Taquilla Cerrada nº: " + taquillaNumber);
-    gpioList.get(taquillaNumber - 1).low();
+    //System.out.println("Pi_ Taquilla Cerrada nº: " + taquillaNumber);
+    //gpioList.get(taquillaNumber - 1).low();
 
   }
 

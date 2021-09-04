@@ -39,142 +39,120 @@ print("running...")
 while True:    
     res = poll.poll()        
     ch = res[0][0].read(3)
+
     if (ch == '00o'):
         s0.value(1)            
-
-    if (ch == '00c'):
-        s0.value(0)
+        utime.sleep(0.5)
+        s0.value(0)            
         
     if (ch == '01o'):
         s1.value(1)
-
-    if (ch == '01c'):
-        s1.value(0)
+        utime.sleep(0.5)
+        s1.value(0)            
 
     if (ch == '02o'):
         s2.value(1)
-
-    if (ch == '02c'):
-        s2.value(0)
+        utime.sleep(0.5)
+        s2.value(0)            
 
     if (ch == '03o'):
         s3.value(1)
-
-    if (ch == '03c'):
-        s3.value(0)
+        utime.sleep(0.5)
+        s3.value(0)            
 
     if (ch == '04o'):
         s4.value(1)
-
-    if (ch == '04c'):
-        s4.value(0)
+        utime.sleep(0.5)
+        s4.value(0)            
 
     if (ch == '05o'):
         s5.value(1)
-
-    if (ch == '05c'):
-        s5.value(0)
+        utime.sleep(0.5)
+        s5.value(0)            
 
     if (ch == '06o'):
         s6.value(1)
-
-    if (ch == '06c'):
-        s6.value(0)
+        utime.sleep(0.5)
+        s6.value(0)            
 
     if (ch == '07o'):
         s7.value(1)
-
-    if (ch == '07c'):
-        s7.value(0)
+        utime.sleep(0.5)
+        s7.value(0)            
 
     if (ch == '08o'):
         s8.value(1)
-
-    if (ch == '08c'):
-        s8.value(0)
+        utime.sleep(0.5)
+        s8.value(0)            
 
     if (ch == '09o'):
         s9.value(1)
-
-    if (ch == '09c'):
-        s9.value(0)
+        utime.sleep(0.5)
+        s9.value(0)            
 
     if (ch == '10o'):
         s10.value(1)
-
-    if (ch == '10c'):
-        s10.value(0)
+        utime.sleep(0.5)
+        s10.value(0)            
 
     if (ch == '11o'):
         s11.value(1)
-
-    if (ch == '11c'):
-        s11.value(0)
+        utime.sleep(0.5)
+        s11.value(0)            
 
     if (ch == '12o'):
         s12.value(1)
-
-    if (ch == '12c'):
-        s12.value(0)
+        utime.sleep(0.5)
+        s12.value(0)            
 
     if (ch == '13o'):
         s13.value(1)
-
-    if (ch == '13c'):
-        s13.value(0)
+        utime.sleep(0.5)
+        s13.value(0)            
 
     if (ch == '14o'):
         s14.value(1)
-
-    if (ch == '14c'):
-        s14.value(0)
+        utime.sleep(0.5)
+        s14.value(0)            
 
     if (ch == '15o'):
         s15.value(1)
-
-    if (ch == '15c'):
-        s15.value(0)
+        utime.sleep(0.5)
+        s15.value(0)            
 
     if (ch == '16o'):
         s16.value(1)
-
-    if (ch == '16c'):
-        s16.value(0)
+        utime.sleep(0.5)
+        s16.value(0)            
 
     if (ch == '17o'):
         s17.value(1)
-
-    if (ch == '17c'):
-        s17.value(0)
+        utime.sleep(0.5)
+        s17.value(0)            
 
     if (ch == '18o'):
         s18.value(1)
-
-    if (ch == '18c'):
-        s18.value(0)
+        utime.sleep(0.5)
+        s18.value(0)            
 
     if (ch == '19o'):
         s19.value(1)
-
-    if (ch == '19c'):
-        s19.value(0)
+        utime.sleep(0.5)
+        s19.value(0)            
 
     if (ch == '20o'):
         s20.value(1)
-
-    if (ch == '20c'):
-        s20.value(0)
+        utime.sleep(0.5)
+        s20.value(0)            
 
     if (ch == '21o'):
         s21.value(1)
-
-    if (ch == '21c'):
-        s21.value(0)
+        utime.sleep(0.5)
+        s21.value(0)            
 
     if (ch == '22o'):
         s22.value(1)
-
-    if (ch == '22c'):
-        s22.value(0)
+        utime.sleep(0.5)
+        s22.value(0)            
 
             
