@@ -48,7 +48,7 @@ public class UserController {
         repo.save(dtoConverter.transform(newElement));
         return "redirect:/user/list";
       } catch (Exception e) {
-        model.addAttribute("error", e.getMessage());
+        model.addAttribute("error", "No se pudo guardar el usuario: "+e.getMessage());
         return "error";
       }
     }
@@ -86,7 +86,7 @@ public class UserController {
         repo.save(dtoConverter.edit(edit));
         return "redirect:/user/list";
       } catch (Exception e) {
-        model.addAttribute("error", e.getMessage());
+        model.addAttribute("error", "No se pudo editar el usuario: "+e.getMessage());
         return "error";
       }
     }
@@ -100,7 +100,7 @@ public class UserController {
       repo.deleteById(id);
       return "redirect:/user/list";
     } catch (Exception e) {
-      model.addAttribute("error", e.getMessage());
+      model.addAttribute("error","No se pudo borrar el usuario: "+ e.getMessage());
       return "error";
     }
   }

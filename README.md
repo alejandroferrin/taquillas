@@ -76,6 +76,11 @@ El sistema permite cablear hasta 20 taquilas, de la salida 0 a la 19.
 
 ![cableado](images/wiring.png)
 
+### Importante -> 
+__En Raspberry Pi 4 se debe usar el diagrama de GPIO de [Pi4J](https://pi4j.com/1.3/pins/rpi-4b.html)__
+
+![gpio](images/pi4j-rpi-4b-pinout-small.png)
+
 ![esquema](images/esquema.png)
 ----
 ## Instalación

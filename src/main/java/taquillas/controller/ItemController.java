@@ -48,7 +48,7 @@ public class ItemController {
         repo.save(dtoConverter.transform(newElement));
         return "redirect:/item/list";
       } catch (Exception e) {
-        model.addAttribute("error", e.getMessage());
+        model.addAttribute("error", "No se pudo guardar el artículo: "+e.getMessage());
         return "error";
       }
     }
@@ -86,7 +86,7 @@ public class ItemController {
         repo.save(dtoConverter.edit(edit));
         return "redirect:/item/list";
       } catch (Exception e) {
-        model.addAttribute("error", e.getMessage());
+        model.addAttribute("error","No se pudo editar el artículo: "+ e.getMessage());
         return "error";
       }
     }
@@ -100,7 +100,7 @@ public class ItemController {
       repo.deleteById(id);
       return "redirect:/item/list";
     } catch (Exception e) {
-      model.addAttribute("error", e.getMessage());
+      model.addAttribute("error","No se pudo borrar el artículo: "+ e.getMessage());
       return "error";
     }
   }

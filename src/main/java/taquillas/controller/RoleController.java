@@ -38,7 +38,7 @@ public class RoleController {
         repo.save(dtoConverter.transform(newElement));
         return "redirect:/role/list";
       } catch (Exception e) {
-        model.addAttribute("error", e.getMessage());
+        model.addAttribute("error","No se pudo guardar el rol: "+ e.getMessage());
         return "error";
       }
     }
@@ -75,7 +75,7 @@ public class RoleController {
         repo.save(dtoConverter.edit(edit));
         return "redirect:/role/list";
       } catch (Exception e) {
-        model.addAttribute("error", e.getMessage());
+        model.addAttribute("error","No se pudo editar el rol: "+ e.getMessage());
         return "error";
       }
     }
@@ -89,7 +89,7 @@ public class RoleController {
       repo.deleteById(id);
       return "redirect:/role/list";
     } catch (Exception e) {
-      model.addAttribute("error", e.getMessage());
+      model.addAttribute("error", "No se pudo borrar el rol: "+e.getMessage());
       return "error";
     }
   }

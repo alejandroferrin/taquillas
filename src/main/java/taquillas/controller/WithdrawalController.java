@@ -103,7 +103,7 @@ public class WithdrawalController {
           }
 
         } catch (Exception e) {
-          model.addAttribute("error", e.getMessage());
+          model.addAttribute("error", "No se pudo realizar la retirada: "+e.getMessage());
           return "error";
         }
 
@@ -177,7 +177,7 @@ public class WithdrawalController {
         repo.save(dtoConverter.edit(edit));
         return "redirect:/withdrawal/list";
       } catch (Exception e) {
-        model.addAttribute("error", e.getMessage());
+        model.addAttribute("error", "No se pudo editar la retirada: "+e.getMessage());
         return "error";
       }
     }
@@ -191,7 +191,7 @@ public class WithdrawalController {
       repo.deleteById(id);
       return "redirect:/withdrawal/list";
     } catch (Exception e) {
-      model.addAttribute("error", e.getMessage());
+      model.addAttribute("error", "No se pudo eliminar la retirada: "+e.getMessage());
       return "error";
     }
   }

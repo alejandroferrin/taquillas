@@ -63,7 +63,7 @@ public class LockerController {
         repo.save(dtoConverter.transform(newElement));
         return "redirect:/locker/list";
       } catch (Exception e) {
-        model.addAttribute("error", e.getMessage());
+        model.addAttribute("error", "No se pudo guardar la taquilla: "+e.getMessage());
         return "error";
       }
     }
@@ -82,7 +82,7 @@ public class LockerController {
         repo.save(dtoConverter.edit(edit));
         return "redirect:/locker/list";
       } catch (Exception e) {
-        model.addAttribute("error", e.getMessage());
+        model.addAttribute("error", "No se pudo editar la taquilla: "+e.getMessage());
         return "error";
       }
     }
@@ -166,7 +166,7 @@ public class LockerController {
     repo.deleteById(id);
     return "redirect:/locker/list";
     } catch (Exception e) {
-      model.addAttribute("error", e.getMessage());
+      model.addAttribute("error","No se pudo borrar la taquilla: "+ e.getMessage());
       return "error";
     }
   }
