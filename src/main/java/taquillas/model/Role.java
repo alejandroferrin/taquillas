@@ -1,5 +1,6 @@
 package taquillas.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
@@ -23,6 +24,7 @@ public class Role {
 	private long id;
 
 	@NotNull
+  @Column(unique = true)
 	//@Enumerated(EnumType.STRING)
 	//private RoleName roleName;
 	private String roleName;

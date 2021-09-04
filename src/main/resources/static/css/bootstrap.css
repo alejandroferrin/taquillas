@@ -2016,9 +2016,9 @@ body {
 }
 
 .alert-warning {
-  color: #664d03;
-  background-color: #fff3cd;
-  border-color: #ffecb5;
+  color: var(--bs-warning);
+  background-color: var(--bs-danger);
+  border-color: var(--bs-danger);
 }
 
 .alert-warning .alert-link {

@@ -2,12 +2,8 @@ package taquillas.controller;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import javax.validation.Valid;
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -20,7 +16,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import taquillas.gpio.GPIO_Service;
 import taquillas.gpio.SerialService;
-
 import taquillas.model.Locker;
 import taquillas.model.dto.LockerDto;
 import taquillas.model.dto.LockerDtoAddRole;
@@ -58,26 +53,38 @@ public class LockerController {
 
   @RequestMapping(value = "/save", method = RequestMethod.POST, params = "action=save")
   public String save(
+    Model model,
     @Valid @ModelAttribute("lockerForm") LockerDto newElement,
     BindingResult bindingResult) {
     if (bindingResult.hasErrors()) {
       return "locker_form";
     } else {
-      repo.save(dtoConverter.transform(newElement));
-      return "redirect:/locker/list";
+      try {
+        repo.save(dtoConverter.transform(newElement));
+        return "redirect:/locker/list";
+      } catch (Exception e) {
+        model.addAttribute("error", e.getMessage());
+        return "error";
+      }
     }
   }
 
   @RequestMapping(value = "/save", method = RequestMethod.POST, params = "action=edit")
   public String editSubmit(
+    Model model,
     @Valid @ModelAttribute("lockerForm") LockerDto edit,
     BindingResult bindingResult) {
 
     if (bindingResult.hasErrors()) {
       return "locker_form";
     } else {
-      repo.save(dtoConverter.edit(edit));
-      return "redirect:/locker/list";
+      try {
+        repo.save(dtoConverter.edit(edit));
+        return "redirect:/locker/list";
+      } catch (Exception e) {
+        model.addAttribute("error", e.getMessage());
+        return "error";
+      }
     }
   }
 
@@ -152,9 +159,16 @@ public class LockerController {
   }
 
   @GetMapping("/delete/{id}")
-  public String delete(@PathVariable long id) {
+  public String delete(
+    Model model,
+    @PathVariable long id) {
+    try {
     repo.deleteById(id);
     return "redirect:/locker/list";
+    } catch (Exception e) {
+      model.addAttribute("error", e.getMessage());
+      return "error";
+    }
   }
 
   @GetMapping("/open/{number}")

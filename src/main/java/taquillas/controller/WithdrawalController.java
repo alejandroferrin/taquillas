@@ -1,7 +1,5 @@
 package taquillas.controller;
 
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -79,18 +77,36 @@ public class WithdrawalController {
       return "redirect:/";
     } else {
       if (checkService.isAuthorized(newElement)) {
-        repo.save(dtoConverter.transform(newElement));
-        stockService.stockModify(newElement.getItemId(),
-          newElement.getQuantity());
-        Item item = itemRepo.findById(newElement.getItemId()).orElse(null);
-        if (item != null) {
+        try {
+          int quantity = newElement.getQuantity();
+          Item item = itemRepo.findById(newElement.getItemId()).orElse(null);
 
-          gpio.open(item.getLocker().getNumber());
+          if (item != null) {
+            if (quantity <= item.getExistencias()) {
+              repo.save(dtoConverter.transform(newElement));
+              stockService.stockModify(newElement.getItemId(),
+                quantity);
 
-          model.addAttribute("lockerNumber", item.getLocker().getNumber());
+              gpio.open(item.getLocker().getNumber());
+
+              model.addAttribute("lockerNumber", item.getLocker().getNumber());
+              model.addAttribute("itemId", newElement.getItemId());
+              return "close_locker";
+            } else {
+              model.addAttribute("existenciasItem", item.getExistencias());
+              model.addAttribute("nombreItem", item.getDenominacion());
+              return "sin_existencias";
+            }
+
+          } else {
+            return "redirect:/";
+          }
+
+        } catch (Exception e) {
+          model.addAttribute("error", e.getMessage());
+          return "error";
         }
-        model.addAttribute("itemId", newElement.getItemId());
-        return "close_locker";
+
       } else {
         return "not_authorized";
       }
@@ -149,6 +165,7 @@ public class WithdrawalController {
 
   @PostMapping("/edit/submit")
   public String editSubmit(
+    Model model,
     @Valid
     @ModelAttribute("withdrawalForm") WithdrawalDto edit,
     BindingResult bindingResult) {
@@ -156,15 +173,27 @@ public class WithdrawalController {
     if (bindingResult.hasErrors()) {
       return "withdrawal_form";
     } else {
-      repo.save(dtoConverter.edit(edit));
-      return "redirect:/withdrawal/list";
+      try {
+        repo.save(dtoConverter.edit(edit));
+        return "redirect:/withdrawal/list";
+      } catch (Exception e) {
+        model.addAttribute("error", e.getMessage());
+        return "error";
+      }
     }
   }
 
   @GetMapping("/delete/{id}")
-  public String delete(@PathVariable long id) {
-    repo.deleteById(id);
-    return "redirect:/withdrawal/list";
+  public String delete(
+    Model model,
+    @PathVariable long id) {
+    try {
+      repo.deleteById(id);
+      return "redirect:/withdrawal/list";
+    } catch (Exception e) {
+      model.addAttribute("error", e.getMessage());
+      return "error";
+    }
   }
 
 }
