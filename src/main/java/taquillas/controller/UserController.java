@@ -1,8 +1,11 @@
 package taquillas.controller;
 
+import java.sql.SQLException;
 import javax.validation.Valid;
+import org.hibernate.engine.jdbc.spi.SqlExceptionHelper;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -47,8 +50,11 @@ public class UserController {
       try {
         repo.save(dtoConverter.transform(newElement));
         return "redirect:/user/list";
+      }catch (DataIntegrityViolationException e){
+        model.addAttribute("error", "No se pudo realizar la operación por violar alguna restricción.\n"+e.getMostSpecificCause());
+        return "error";
       } catch (Exception e) {
-        model.addAttribute("error", "No se pudo guardar el usuario: "+e.getMessage());
+        model.addAttribute("error", "No se pudo guardar el usuario: " + e);
         return "error";
       }
     }
@@ -85,8 +91,11 @@ public class UserController {
       try {
         repo.save(dtoConverter.edit(edit));
         return "redirect:/user/list";
+      }catch (DataIntegrityViolationException e){
+        model.addAttribute("error", "No se pudo realizar la operación por violar alguna restricción.\n"+e.getMostSpecificCause());
+        return "error";
       } catch (Exception e) {
-        model.addAttribute("error", "No se pudo editar el usuario: "+e.getMessage());
+        model.addAttribute("error", "No se pudo guardar: " + e);
         return "error";
       }
     }
@@ -100,7 +109,7 @@ public class UserController {
       repo.deleteById(id);
       return "redirect:/user/list";
     } catch (Exception e) {
-      model.addAttribute("error","No se pudo borrar el usuario: "+ e.getMessage());
+      model.addAttribute("error", "No se pudo borrar el usuario: " + e.getMessage());
       return "error";
     }
   }

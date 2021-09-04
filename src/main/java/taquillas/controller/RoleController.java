@@ -2,6 +2,7 @@ package taquillas.controller;
 
 import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -37,8 +38,11 @@ public class RoleController {
       try {
         repo.save(dtoConverter.transform(newElement));
         return "redirect:/role/list";
+      }catch (DataIntegrityViolationException e){
+        model.addAttribute("error", "No se pudo realizar la operación por violar alguna restricción.\n"+e.getMostSpecificCause());
+        return "error";
       } catch (Exception e) {
-        model.addAttribute("error","No se pudo guardar el rol: "+ e.getMessage());
+        model.addAttribute("error", "No se pudo guardar: " + e);
         return "error";
       }
     }
@@ -74,8 +78,11 @@ public class RoleController {
       try {
         repo.save(dtoConverter.edit(edit));
         return "redirect:/role/list";
+      }catch (DataIntegrityViolationException e){
+        model.addAttribute("error", "No se pudo realizar la operación por violar alguna restricción.\n"+e.getMostSpecificCause());
+        return "error";
       } catch (Exception e) {
-        model.addAttribute("error","No se pudo editar el rol: "+ e.getMessage());
+        model.addAttribute("error", "No se pudo guardar: " + e);
         return "error";
       }
     }
