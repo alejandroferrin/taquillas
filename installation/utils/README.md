@@ -3,4 +3,8 @@
 
 `curl -s https://raw.githubusercontent.com/alejandroferrin/taquillas/main/installation/utils/configure-access-point | sudo bash`
 
-Ip del Access Point: __192.168.4.2__
+IP Raspberry: __192.168.4.2__
+
+ssid = WIFI_TAQUILLAS
+
+password = wifi7aqui11as

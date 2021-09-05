@@ -41,5 +41,10 @@ sudo usermod -aG docker pi
 echo "#####################__Instalando docker-compose__"
 sudo apt -y install docker-compose
 
+echo "#####################__Instalando vim__"
+sudo apt -y install vim
+echo "#####################__Instalando vnc__"
+sudo apt -y install realvnc-vnc-server realvnc-vnc-viewer
+
 echo "#####################__Reinicio necesario__"
 echo "#####################__Ahora apaga la raspberry y vuelve a encenderla__"
