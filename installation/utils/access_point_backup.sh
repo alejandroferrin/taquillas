@@ -9,7 +9,7 @@ sudo apt -y install dnsmasq
 sudo DEBIAN_FRONTEND=noninteractive apt install -y netfilter-persistent iptables-persistent
 sudo echo "" >> /etc/dhcpcd.conf
 sudo echo "interface wlan0" >> /etc/dhcpcd.conf
-sudo echo "static ip_address=192.168.4.1/24ᅾ" >> /etc/dhcpcd.conf
+sudo echo "static ip_address=192.168.4.1/24" >> /etc/dhcpcd.conf
 sudo echo "nohook wpa_supplicant" >> /etc/dhcpcd.conf
 
 sudo echo "net.ipv4.ip_forward=1" >> /etc/sysctl.d/routed-ap.conf
