@@ -10,8 +10,10 @@ sudo systemctl stop dnsmasq
 sudo echo "interface=wlan0" >> /etc/hostapd/hostapd.conf
 sudo echo "driver=nl80211" >> /etc/hostapd/hostapd.conf
 sudo echo "ssid=WIFI_TAQUILLAS" >> /etc/hostapd/hostapd.conf
-sudo echo "hw_mode=g" >> /etc/hostapd/hostapd.conf
-sudo echo "channel=7" >> /etc/hostapd/hostapd.conf
+#sudo echo "hw_mode=g" >> /etc/hostapd/hostapd.conf
+#sudo echo "channel=7" >> /etc/hostapd/hostapd.conf
+sudo echo "hw_mode=a" >> /etc/hostapd/hostapd.conf
+sudo echo "channel=36" >> /etc/hostapd/hostapd.conf
 sudo echo "wmm_enabled=0" >> /etc/hostapd/hostapd.conf
 sudo echo "macaddr_acl=0" >> /etc/hostapd/hostapd.conf
 sudo echo "auth_algs=1" >> /etc/hostapd/hostapd.conf
