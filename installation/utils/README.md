@@ -3,4 +3,4 @@
 
 `curl -s https://raw.githubusercontent.com/alejandroferrin/taquillas/main/installation/utils/configure-access-point | sudo bash`
 
-Ip del Access Point: __192.168.4.1__
+Ip del Access Point: __192.168.4.2__
