@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Taquilla</title>
+    <!-- Bootstrap core CSS -->
+    <link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap.css" rel="stylesheet">
+    <link href="/css/jquery.ml-keyboard.css" rel="stylesheet">
+    <link href="/css/taquillas.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <header th:insert="fragments.html :: header"> </header>
+    <div class="container">
+      <form class="w-50 mx-auto my-3" method="post" action="#" th:action="@{/locker/save}" th:object="${lockerForm}">
+        <h3 th:text="${lockerForm.id!=0} ? 'Editar taquilla' : 'Nueva taquilla' " class="text-center"></h3>
+        <input type="number" class="form-control" id="id" th:field="*{id}" hidden=true>
+        <div class="form-group my-3">
+          <label class="form-label" for="number">Número de taquilla</label> <input type="number" class="form-control"
+                                                                                   id="number" th:field="*{number}" required min="1" max="12">
+        </div>
+        <div class="form-group my-3">
+          <h5>Roles autorizados a abrir la taquilla</h5>
+          <input type="text" th:each="role, itemStat : *{roles}" th:field="*{roles[__${itemStat.index}__]}"
+                 class="form-control my-2">
+          <button type="submit" name="action" value="addRole" class="btn btn-warning">+</button>
+
+        </div>
+
+        <div th:if="${lockerForm.id!=0}">
+          <h5 class="my-3">Items que contiene la taquilla</h5>
+          <ul class="list-group my-3">
+            <li th:each="item : *{items}" th:text="${item}" class="list-group-item"></li>
+          </ul>
+        </div>
+
+
+
+        <div class="d-flex justify-content-end">
+          <a th:href="@{/locker/list}" class="btn btn-secondary mx-2">Cancelar</a>
+          <button th:if="${lockerForm.id!=0}" type="submit" name="action" value="edit"
+                  class="btn btn-warning mx-2">Guardar Cambios</button>
+          <button th:if="${lockerForm.id==0}" type="submit" name="action" value="save"
+                  class="btn btn-warning mx-2">Enviar</button>
+        </div>
+      </form>
+
+
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div th:replace="fragments.html :: footer"></div>
+    <!--   Bootstrap js -->
+    <script src="/webjars/jquery/jquery.min.js"></script>
+    <script src="/webjars/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/public_scripts/jquery.ml-keyboard.min.js"></script>
+    <script src="/public_scripts/keyboard_button.js"></script>
+    <script src="/public_scripts/bootstrap-input-spinner.js"></script>
+    <script>
+      $("input[type='number']").inputSpinner();
+    </script>
+  </body>
+
+</html>
