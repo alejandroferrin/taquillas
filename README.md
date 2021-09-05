@@ -172,3 +172,9 @@ El password puede cambiarse si al ejecutar el programa lo hacemos con el argumen
 - `--admin_password=my_password`
 - `--gpio=pico` o `--gpio=pi4`
 
+### Extra
+
+[Configurar la Raspberry como Access Point](https://github.com/alejandroferrin/taquillas/installation/utils) 
+
+
+

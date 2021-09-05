@@ -1,0 +1,8 @@
+#!/bin/bash
+
+wget -P /home/pi/AppTaquillas/ https://raw.githubusercontent.com/alejandroferrin/taquillas/main/installation/utils/access_point.sh
+
+sudo chmod +x /home/pi/AppTaquillas/access_point.sh
+
+sudo /home/pi/AppTaquillas/access_point.sh
+
