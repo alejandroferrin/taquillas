@@ -174,7 +174,7 @@ El password puede cambiarse si al ejecutar el programa lo hacemos con el argumen
 
 ### Extra
 
-[Configurar la Raspberry como Access Point](https://github.com/alejandroferrin/taquillas/installation/utils) 
+[Configurar la Raspberry como Access Point](https://github.com/alejandroferrin/taquillas/tree/main/installation/utils) 
 
 
 
