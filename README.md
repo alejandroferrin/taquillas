@@ -40,11 +40,11 @@ Lector tarjetas NFC ACS - [ACR122U](https://www.acs.com.hk/en/products/3/acr122u
 
 - __I__ [Cerradura eléctrica 5V](https://es.aliexpress.com/item/1005003038262076.html?spm=a2g0o.cart.0.0.556f3c00RlUl5S&mp=1)  (x12)
 
-- __J__ [Ventilador 5V (2uds)](https://www.amazon.es/GeeekPi-Piezas-Raspberry-Ventilador-escobillas/dp/B07X37NXGX/ref=sr_1_7?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=ventilador%2B5v&qid=1630653379&sr=8-7&th=1) (x1)
+- __J__ [Ventilador 220v 9225 Dual Ball](https://es.aliexpress.com/item/1005001775087852.html?spm=a2g0o.detail.100009.3.7893287ec6pY6y&amp;gps-id=pcDetailLeftTopSell&amp;scm=1007.13482.95643.0&amp;scm_id=1007.13482.95643.0&amp;scm-url=1007.13482.95643.0&amp;pvid=79ae7cf3-9e93-4aed-b17e-f6d4ae730271&amp;_t=gps-id:pcDetailLeftTopSell,scm-url:1007.13482.95643.0,pvid:79ae7cf3-9e93-4aed-b17e-f6d4ae730271,tpp_buckets:668%230%23131923%2327_668%230%23131923%2327_668%23888%233325%231_668%23888%233325%231_668%232846%238114%231999_668%235811%2327178%2332_668%237206%2334833%2320_668%236421%2330822%23148_668%232717%237564%23620_668%231000022185%231000066058%230_668%236808%2332770%23187_668%233480%2315683%23664_668%232846%238114%231999_668%235811%2327178%2332_668%237206%2334833%2320_668%236421%2330822%23148_668%232717%237564%23620_668%233164%239976%23866_668%236808%2332770%23187_668%233480%2315683%23664&amp;&amp;pdp_ext_f=%7B%22sceneId%22:%223482%22%7D) (x1)
 
 - __K__ [Cable jumper female-female](https://es.aliexpress.com/item/4000204863216.html?spm=a2g0o.productlist.0.0.43a05fdaCym1zF&algo_pvid=84528e71-9fde-401f-9ca0-051ac59dd1d5&algo_exp_id=84528e71-9fde-401f-9ca0-051ac59dd1d5-1) (x1)
 
-- __L__ [Separadores PCB](https://es.rs-online.com/web/p/pilares-de-soporte-para-pcb/0220822) (x8)
+- __L__ [Enchufe montaje DIN](https://es.aliexpress.com/item/1005002837461759.html?srcSns=sns_Copy&amp;spreadType=socialShare&amp;bizType=ProductDetail&amp;social_params=60093403662&amp;aff_fcid=373826c1a8214d61bb242367fd4e4d70-1630904138203-05809-_vPJppU&amp;tt=MG&amp;aff_fsk=_vPJppU&amp;aff_platform=default&amp;sk=_vPJppU&amp;aff_trace_key=373826c1a8214d61bb242367fd4e4d70-1630904138203-05809-_vPJppU&amp;shareId=60093403662&amp;businessType=ProductDetail&amp;platform=AE&amp;terminal_id=434d7d9f216e4811937444fc960d5c93) 
 
 - __M__ [Toma alimentación](https://es.rs-online.com/web/p/conectores-iec/8117210/) (x1)
 
@@ -55,17 +55,17 @@ Lector tarjetas NFC ACS - [ACR122U](https://www.acs.com.hk/en/products/3/acr122u
 
 - __Q__ [Carril DIN 500 mm](https://es.rs-online.com/web/p/carriles-din/0467406/) (x1)
 
-- __R__ [Rejilla ventilador](https://es.rs-online.com/web/p/guardamanos/7373960/) (x2)
+- __R__ [Soporte PCB carril DIN](https://es.aliexpress.com/item/32627565613.html?srcSns=sns_Copy&amp;spreadType=socialShare&amp;bizType=ProductDetail&amp;social_params=60093403678&amp;aff_fcid=f5e39ac6299440439a6f9ff8aca7a0ca-1630904146078-09924-_v3YYwS&amp;tt=MG&amp;aff_fsk=_v3YYwS&amp;aff_platform=default&amp;sk=_v3YYwS&amp;aff_trace_key=f5e39ac6299440439a6f9ff8aca7a0ca-1630904146078-09924-_v3YYwS&amp;shareId=60093403678&amp;businessType=ProductDetail&amp;platform=AE&amp;terminal_id=434d7d9f216e4811937444fc960d5c93) 
 
 - __S__ [Caja 400x300x150](https://es.rs-online.com/web/p/cajas-de-pared/7755798) (x1)
 
-- __T__ [Regleta 220v](https://es.rs-online.com/web/p/conectores-hembra-de-bajada-y-distribucion-electrica/1484651) (x1)
+- __T__ [Carcasa Raspberry Pi 4 carril DIN](https://es.aliexpress.com/item/1005002226947544.html?srcSns=sns_Copy&amp;spreadType=socialShare&amp;bizType=ProductDetail&amp;social_params=60092905860&amp;aff_fcid=217b53087a5a48daa9a6578516613a54-1630904144180-01400-_v0pm8q&amp;tt=MG&amp;aff_fsk=_v0pm8q&amp;aff_platform=default&amp;sk=_v0pm8q&amp;aff_trace_key=217b53087a5a48daa9a6578516613a54-1630904144180-01400-_v0pm8q&amp;shareId=60092905860&amp;businessType=ProductDetail&amp;platform=AE&amp;terminal_id=434d7d9f216e4811937444fc960d5c93)  (x1)
 
 - __U__ [Disipadores calor Rpi 4](https://es.rs-online.com/web/p/placas-hat-y-complementos-para-raspberry-pi/2020460) (x1)
 
-- __V__ [Cable alimentación 500mm](https://es.rs-online.com/web/p/cables-de-alimentacion-para-equipos/1469115) (x1)
+- __V__ [Placa terminación](https://es.rs-online.com/web/p/accesorios-para-terminal-de-carril-din/8787540/)  (x10)
 
-- [Taquillas](https://www.amazon.es/compartimento-taquilla-Compartimiento-revestimiento-Antracita/dp/B07BZKZ557/ref=sr_1_32?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=taquillas+12&qid=1630611007&sr=8-32) 
+- [Taquillas](https://www.amazon.es/compartimento-taquilla-Compartimiento-revestimiento-Antracita/dp/B07BZKZ557/ref=sr_1_32?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=taquillas+12&qid=1630611007&sr=8-32)
 
 ----
 ## Esquema
@@ -76,12 +76,15 @@ El sistema permite cablear hasta 20 taquilas, de la salida 0 a la 19.
 
 ![cableado](images/wiring.png)
 
+
 ### Importante -> 
 __En Raspberry Pi 4 se debe usar el diagrama de GPIO de [Pi4J](https://pi4j.com/1.3/pins/rpi-4b.html)__
 
 ![gpio](images/pi4j-rpi-4b-pinout-small.png)
 
 ![esquema](images/esquema.png)
+
+![esquema eléctrico](images/esquema-electrico.png)
 ----
 ## Instalación
 
