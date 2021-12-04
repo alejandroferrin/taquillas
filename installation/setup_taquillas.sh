@@ -14,12 +14,14 @@ sudo apt -y install openjdk-8-jdk
 echo "#####################__Instalando SmartCard Reader__"
 sudo apt-get -y install subversion autoconf debhelper flex libusb-dev libpcsclite-dev libpcsclite1 libccid pcscd pcsc-tools libpcsc-perl libusb-1.0-0-dev libtool libssl-dev cmake checkinstall
 
-echo "#####################__Descargando ACS driver__"
-wget -P /home/pi/AppTaquillas/ https://www.acs.com.hk/download-driver-unified/11929/ACS-Unified-PKG-Lnx-118-P.zip
-echo "#####################__Descomprimiendo ACS driver__"
-unzip /home/pi/AppTaquillas/ACS-Unified-PKG-Lnx-118-P.zip -d AppTaquillas/
+#echo "#####################__Descargando ACS driver__"
+#wget -P /home/pi/AppTaquillas/ https://www.acs.com.hk/download-driver-unified/11929/ACS-Unified-PKG-Lnx-118-P.zip
+wget -P /home/pi/AppTaquillas/DriverACS https://github.com/alejandroferrin/taquillas/raw/main/DriverACS/libacsccid1_1.1.8-1~bpo10+1_armhf.deb
+#echo "#####################__Descomprimiendo ACS driver__"
+#unzip /home/pi/AppTaquillas/ACS-Unified-PKG-Lnx-118-P.zip -d AppTaquillas/
 echo "#####################__Instalando ACS driver__"
-sudo dpkg -i /home/pi/AppTaquillas/ACS-Unified-PKG-Lnx-118-P/raspbian/buster/libacsccid1_1.1.8-1~bpo10+1_armhf.deb
+#sudo dpkg -i /home/pi/AppTaquillas/ACS-Unified-PKG-Lnx-118-P/raspbian/buster/libacsccid1_1.1.8-1~bpo10+1_armhf.deb
+sudo dpkg -i /home/pi/AppTaquillas/DriverACS/libacsccid1_1.1.8-1~bpo10+1_armhf.deb
 
 echo "#####################__Instalar pi4j__"
 curl -sSL https://pi4j.com/install | sudo bash

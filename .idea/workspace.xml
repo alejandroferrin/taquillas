@@ -6,6 +6,59 @@
   <component name="ChangeListManager">
     <list default="true" id="29f17810-373f-4d38-af47-966f2c72ed0a" name="Changes" comment="Changes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/maven/com.alex/mvc_taquillas/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/maven/com.alex/mvc_taquillas/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/taquillas/MvcTaquillasApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/taquillas/config/MvcConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/taquillas/controller/CardController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/taquillas/controller/ItemController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/taquillas/controller/LockerController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/taquillas/controller/MainController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/taquillas/controller/RoleController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/taquillas/controller/UserController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/taquillas/controller/WithdrawalController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/taquillas/gpio/GPIO_Service.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/taquillas/gpio/GPIO_Service_Impl_Mocked.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/taquillas/gpio/GPIO_Service_Impl_Pi.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/taquillas/gpio/GPIO_Service_Impl_Pico.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/taquillas/gpio/SerialService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/taquillas/model/Item$ItemBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/taquillas/model/Item.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/taquillas/model/Locker$LockerBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/taquillas/model/Locker.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/taquillas/model/Role$RoleBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/taquillas/model/Role.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/taquillas/model/RoleName.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/taquillas/model/User$UserBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/taquillas/model/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/taquillas/model/Withdrawal$WithdrawalBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/taquillas/model/Withdrawal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/taquillas/model/dto/ItemDto$ItemDtoBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/taquillas/model/dto/ItemDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/taquillas/model/dto/LockerDto$LockerDtoBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/taquillas/model/dto/LockerDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/taquillas/model/dto/LockerDtoAddRole$LockerDtoAddRoleBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/taquillas/model/dto/LockerDtoAddRole.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/taquillas/model/dto/RoleDto$RoleDtoBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/taquillas/model/dto/RoleDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/taquillas/model/dto/UserDto$UserDtoBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/taquillas/model/dto/UserDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/taquillas/model/dto/WithdrawalDto$WithdrawalDtoBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/taquillas/model/dto/WithdrawalDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/taquillas/model/dto/converter/ItemDtoConverter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/taquillas/model/dto/converter/LockerDtoConverter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/taquillas/model/dto/converter/RoleDtoConverter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/taquillas/model/dto/converter/UserDtoConverter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/taquillas/model/dto/converter/WithdrawalDtoConverter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/taquillas/repository/ItemRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/taquillas/repository/LockerRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/taquillas/repository/RoleRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/taquillas/repository/UserRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/taquillas/repository/WithdrawalRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/taquillas/security/SecurityConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/taquillas/service/CheckRoleService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/taquillas/service/StockService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/taquillas/smartcard/CardReader.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +86,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -41,6 +94,19 @@
       <recent name="taquillas.model.dto" />
       <recent name="taquillas.controller" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
