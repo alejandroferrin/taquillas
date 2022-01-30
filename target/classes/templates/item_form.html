@@ -36,11 +36,15 @@
             <div class="form-group my-3">
                 <label class="form-label" for="locker">Taquilla</label> <select class="form-select" id="locker"
                     th:field="*{taquillaNumber}">
-                    <option th:each="locker : ${lockersList}" th:value="${locker.number}" th:text="${locker.number}" required>
+                    <option th:each="locker : ${lockersList}" th:value="${locker.number}" th:text="${locker.number}"
+                        required>
                     </option>
                 </select>
             </div>
             <div class="d-flex justify-content-end">
+                <a class="btn btn-success mx-2" th:if="${itemForm.id!=0}"
+                    th:onclick="'$.get(\'/locker/open/'+${taquillaNumber}+'\')'"><svg
+                        th:replace="fragments.html :: open_lock"></svg></a>
                 <a th:href="@{/item/list}" class="btn btn-secondary mx-2">Cancelar</a>
                 <button type="submit" class="btn btn-warning mx-2">Enviar</button>
             </div>
