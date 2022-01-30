@@ -4,7 +4,12 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -13,8 +18,10 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+
 import taquillas.gpio.GPIO_Service;
 import taquillas.model.Item;
+import taquillas.model.User;
 import taquillas.model.Withdrawal;
 import taquillas.model.dto.WithdrawalDto;
 import taquillas.model.dto.converter.WithdrawalDtoConverter;
@@ -22,6 +29,7 @@ import taquillas.repository.ItemRepository;
 import taquillas.repository.UserRepository;
 import taquillas.repository.WithdrawalRepository;
 import taquillas.service.CheckRoleService;
+import taquillas.service.LoginService;
 import taquillas.service.StockService;
 import taquillas.smartcard.CardReader;
 
@@ -43,9 +51,13 @@ public class WithdrawalController {
 	private CardReader cardReader;
 	@Autowired
 	private CheckRoleService checkService;
-
+	@Autowired
+	private LoginService loginService;
 	@Autowired
 	private GPIO_Service gpio;
+
+	@Value("${admin_password}")
+	private String pass;
 
 	@GetMapping("/card")
 	public String redirect(Model model) {
@@ -53,15 +65,23 @@ public class WithdrawalController {
 		try {
 			cardNumber = cardReader.getRead();
 			WithdrawalDto dto = new WithdrawalDto().builder().userNumber(cardNumber).build();
-			model.addAttribute("withdrawalForm", dto);
-			List<Item> items = itemRepo.findAll();
-			model.addAttribute("itemsList", items.stream()
-					.filter(i -> checkService.isAuthorized(cardNumber, i))
-					.collect(Collectors.toList()));
-			return "withdrawal_form_card";
+			User user = userRepo.findByNumber(cardNumber).orElse(null);
+			if (user != null) {
+				if (user.getRole().getRoleName().equals("ADMIN")) {
+					loginService.login("admin", pass);
+					return "redirect:/item/list";
+				}
+				model.addAttribute("withdrawalForm", dto);
+				List<Item> items = itemRepo.findAll();
+				model.addAttribute("itemsList", items.stream()
+						.filter(i -> checkService.isAuthorized(cardNumber, i))
+						.collect(Collectors.toList()));
+				return "withdrawal_form_card";
+			}
 		} catch (Exception ex) {
 			return "redirect:/";
 		}
+		return "redirect:/";
 
 	}
 

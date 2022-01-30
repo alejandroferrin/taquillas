@@ -72,5 +72,4 @@ public class CheckRoleService {
 		}
 		return false;
 	}
-
 }

@@ -7,7 +7,6 @@ import taquillas.model.Item;
 import taquillas.repository.ItemRepository;
 
 @Service
-
 public class StockService {
 
 	@Autowired
