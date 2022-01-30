@@ -19,24 +19,40 @@
         <div class="d-flex flex-column justify-content-between h-100">
             <div class="">
                 <div th:replace="fragments.html::logo"></div>
-                <form class="w-50 mx-auto my-3" method="post" action="#" th:action="@{/withdrawal/save}"
+                <form class="w-100 mx-auto my-3" method="post" action="#" th:action="@{/withdrawal/save}"
                     th:object="${withdrawalForm}">
                     <h3 class="text-center text-light">Retirar artículo de taquilla</h3>
                     <input type="number" class="form-control" id="id" th:field="*{id}" hidden>
                     <input type="text" class="form-control" id="at" th:field="*{at}" hidden>
                     <input type="text" class="form-control" id="at" th:field="*{userNumber}" hidden>
-                    <div class="form-group my-5">
-                        <label class="form-label fs-4 text-light" for="item">Artículo</label> <select class="form-select form-select-lg"
-                            id="item" th:field="*{itemId}">
+                    <!--                     <div class="form-group my-5">
+                        <label class="form-label fs-4 text-light" for="item">Artículo</label>
+                        <select class="form-select form-select-lg" id="item" th:field="*{itemId}">
                             <option th:each="element : ${itemsList}" th:value="${element.id}"
-                                th:text="${element.denominacion}"></option>
+                                th:text="${element.denominacion}+' -------- Existencias: '+${element.existencias}">
+                            </option>
                         </select>
+                    </div> -->
+                    <div class="my-5 mx-5 row">
+                        <div class="col-12 col-sm-6 col-md-6 col-lg-3 col-xl-2 p-2" th:each="element : ${itemsList}">
+                            <div class="item-card text-center">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                    th:field="*{itemId}" th:id="${element.id}" th:value="${element.id}">
+                                <label class="form-check-label h-100 w-100" th:for="${element.id}">
+                                    <div class="fs-4" th:text="${element.denominacion}"></div>
+                                    <div th:text="'Existencias: '+${element.existencias}"></div>
+                                    <div class="bg-primary text-white p-1 m-1 rounded"
+                                        th:if="${element.existencias} &lt;= 0">SIN EXISTENCIAS</div>
+                                </label>
+                            </div>
+                        </div>
                     </div>
-                    <div class="form-group my-5">
+                    <div class="form-group my-5 w-50 mx-auto">
                         <label class="form-label fs-4 text-light" for="number">Cantidad</label>
-                        <input type="number" class="form-control form-control-lg" id="number" th:field="*{quantity}" required min="1">
+                        <input type="number" class="form-control form-control-lg" id="number" th:field="*{quantity}"
+                            required min="1">
                     </div>
-                    <div class="d-flex justify-content-end">
+                    <div class="d-flex justify-content-center">
                         <a th:href="@{/}" class="btn btn-secondary btn-lg mx-2">Cancelar</a>
                         <button type="submit" class="btn btn-warning btn-lg mx-2">Enviar</button>
                     </div>
@@ -52,7 +68,7 @@
         <button th:replace="fragments.html :: keyboard_button"> </button>
     </div>
 
-<!--     <div th:replace="fragments.html :: footer"></div> -->
+    <!--     <div th:replace="fragments.html :: footer"></div> -->
 
     <!--   Bootstrap js -->
     <script src="/webjars/jquery/jquery.min.js"></script>

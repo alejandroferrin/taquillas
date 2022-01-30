@@ -6,3 +6,9 @@
     top:2em;
 }
 
+.item-card{
+    height: 200px;
+    background-color: azure;
+    padding: 10px;
+}
+

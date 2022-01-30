@@ -22,32 +22,55 @@ import taquillas.repository.UserRepository;
 @Service
 public class CheckRoleService {
 
-  @Autowired
-  private ItemRepository itemRepo;
-  @Autowired
-  private UserRepository userRepo;
+	@Autowired
+	private ItemRepository itemRepo;
+	@Autowired
+	private UserRepository userRepo;
 
-  public boolean isAuthorized(WithdrawalDto dto) {
+	public boolean isAuthorized(String cardNumber, Item itemCandidate) {
 
-    String userNumber = dto.getUserNumber();
-    long itemId = dto.getItemId();
+		String userNumber = cardNumber;
+		long itemId = itemCandidate.getId();
 
-    User user = userRepo.findByNumber(userNumber).orElse(null);
-    Item item = itemRepo.findById(itemId).orElse(null);
-    if (user == null || item == null) {
-      return false;
-    }
+		User user = userRepo.findByNumber(userNumber).orElse(null);
+		Item item = itemRepo.findById(itemId).orElse(null);
+		if (user == null || item == null) {
+			return false;
+		}
 
-    Role userRole = user.getRole();
-    List<Role> lockerRole = item.getLocker().getRolesAutorizados();
+		Role userRole = user.getRole();
+		List<Role> lockerRole = item.getLocker().getRolesAutorizados();
 
-    for (Role role : lockerRole) {
-      if (role == userRole) {
-        return true;
-      }
+		for (Role role : lockerRole) {
+			if (role == userRole) {
+				return true;
+			}
 
-    }
-    return false;
-  }
+		}
+		return false;
+	}
+
+	public boolean isAuthorized(WithdrawalDto dto) {
+
+		String userNumber = dto.getUserNumber();
+		long itemId = dto.getItemId();
+
+		User user = userRepo.findByNumber(userNumber).orElse(null);
+		Item item = itemRepo.findById(itemId).orElse(null);
+		if (user == null || item == null) {
+			return false;
+		}
+
+		Role userRole = user.getRole();
+		List<Role> lockerRole = item.getLocker().getRolesAutorizados();
+
+		for (Role role : lockerRole) {
+			if (role == userRole) {
+				return true;
+			}
+
+		}
+		return false;
+	}
 
 }
