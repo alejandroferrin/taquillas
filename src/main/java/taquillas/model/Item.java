@@ -39,11 +39,11 @@ public class Item {
 
 	private int existencias;
 
-	
-	@ManyToOne
-	@JoinColumn(name="locker_id")
-	private Locker locker;
+	private boolean consumable;
 
+	@ManyToOne
+	@JoinColumn(name = "locker_id")
+	private Locker locker;
 
 	@JsonIgnore
 	@OneToMany(mappedBy = "item", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)

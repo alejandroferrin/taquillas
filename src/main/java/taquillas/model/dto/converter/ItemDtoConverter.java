@@ -1,6 +1,5 @@
 package taquillas.model.dto.converter;
 
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -23,6 +22,7 @@ public class ItemDtoConverter {
 				.codigo(dto.getCodigo())
 				.denominacion(dto.getDenominacion())
 				.existencias(dto.getExistencias())
+				.consumable(dto.isConsumable())
 				.locker(lockerRepo.findByNumber(dto.getTaquillaNumber())
 						.orElse(null))
 				.build();
@@ -37,6 +37,7 @@ public class ItemDtoConverter {
 				.denominacion(model.getDenominacion())
 				.existencias(model.getExistencias())
 				.taquillaNumber(model.getLocker().getNumber())
+				.consumable(model.isConsumable())
 				.build();
 
 	}
@@ -50,6 +51,7 @@ public class ItemDtoConverter {
 		item.setExistencias(dto.getExistencias());
 		item.setLocker(
 				lockerRepo.findByNumber(dto.getTaquillaNumber()).orElse(null));
+		item.setConsumable(dto.isConsumable());
 		return item;
 
 	}

@@ -1,6 +1,5 @@
 package taquillas.model.dto;
 
-
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -16,4 +15,5 @@ public class ItemDto {
 	private String denominacion;
 	private int existencias;
 	private int taquillaNumber;
+	private boolean consumable;
 }

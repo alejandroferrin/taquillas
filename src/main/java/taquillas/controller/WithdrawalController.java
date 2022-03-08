@@ -105,9 +105,10 @@ public class WithdrawalController {
 					Item item = itemRepo.findById(newElement.getItemId()).orElse(null);
 
 					if (item != null) {
-						if (quantity <= item.getExistencias()) {
+						
+						if (quantity <= item.getExistencias() || !item.isConsumable()) {
 							repo.save(dtoConverter.transform(newElement));
-							stockService.stockModify(newElement.getItemId(), quantity);
+							stockService.stockModify(item, quantity);
 
 							gpio.open(item.getLocker().getNumber());
 

@@ -12,12 +12,21 @@ public class StockService {
 	@Autowired
 	private ItemRepository repo;
 
-	public void stockModify(long id, int q) {
+	public void stockModify(Item i, int q) {
 
-		Item i = repo.findById(id).get();
-		int current = i.getExistencias();
-		i.setExistencias(current - q);
-		repo.save(i);
+		if (!i.isConsumable()) {
+			int current = i.getExistencias();
+			if (current <= 0) {
+				i.setExistencias(1);
+			} else {
+				i.setExistencias(0);
+			}
+			repo.save(i);
+		} else {
+			int current = i.getExistencias();
+			i.setExistencias(current - q);
+			repo.save(i);
+		}
 
 	}
 
